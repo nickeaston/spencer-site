@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-22T07:10:01.164051+10:00",
-  "generated_display": "7:10am AEST \u00b7 22 Apr 2026",
+  "generated_at": "2026-04-22T09:15:01.150666+10:00",
+  "generated_display": "9:15am AEST \u00b7 22 Apr 2026",
   "weekday": "Wednesday",
   "jobs_today": [
     {
@@ -24,8 +24,8 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "pending",
-      "detail": "7 cron jobs monitored"
+      "status": "ran",
+      "detail": "all green"
     },
     {
       "time": "10am",
