@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Spencer — AI operations, built and run for you</title>
-<meta name="description" content="Spencer as a Service. AI-powered chief of staff built around your life, your work, your family. Not software you buy — a system we run." />
+<title>Spencer — AI operations, built and run for you | AI chief of staff for Australian businesses</title>
+<meta name="description" content="Spencer as a Service: AI operations built, run, and improved for your business or life. Discovery call 30 min · projects from $1,200 · Melbourne-based, Australia-wide." />
+<meta name="keywords" content="AI consulting Australia, AI chief of staff, AI operations, Melbourne AI consultant, small business AI, AI integration Melbourne, workflow automation Australia" />
+<meta name="author" content="Spencer — Easton Enterprises" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://usespencer.com/" />
 <meta property="og:title" content="Spencer — AI operations, built and run for you" />
 <meta property="og:description" content="Not another AI tool. A working AI system we build, run, and improve for you." />
 <meta property="og:type" content="website" />
@@ -22,6 +26,44 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<!-- Schema.org structured data — helps Google show rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Spencer",
+  "description": "Spencer as a Service — AI operations built, run, and improved for your business, personal life, or financial operations. Based in Melbourne, serving clients Australia-wide.",
+  "url": "https://usespencer.com/",
+  "logo": "https://usespencer.com/og-image.png",
+  "image": "https://usespencer.com/og-image.png",
+  "priceRange": "$$",
+  "areaServed": { "@type": "Country", "name": "Australia" },
+  "address": { "@type": "PostalAddress", "addressRegion": "VIC", "addressCountry": "AU" },
+  "parentOrganization": { "@type": "Organization", "name": "Easton Enterprises" },
+  "offers": [
+    { "@type": "Offer", "name": "Project Tier", "price": "1200", "priceCurrency": "AUD", "description": "Scoped AI project — workflow, communication, or research build. 1-4 weeks." },
+    { "@type": "Offer", "name": "Integration Tier", "price": "3000", "priceCurrency": "AUD", "description": "Monthly retainer — embedded AI operations with monthly build cycle." },
+    { "@type": "Offer", "name": "Executive Tier", "price": "7500", "priceCurrency": "AUD", "description": "Full AI chief-of-staff — daily briefing, unlimited builds, research on demand." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What's the difference between Spencer and using Claude or ChatGPT myself?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Claude and ChatGPT are raw tools. Spencer is the operation built around them — we design it, connect it, run it, monitor it, and improve it. You don't talk to Claude. You talk to us. We talk to Claude." } },
+    { "@type": "Question", "name": "What about my data and privacy?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your data stays in systems you control — your Google Drive, email, calendar. We don't store private data on our servers. Every integration runs against APIs authenticated via your credentials. You can walk away at any time with everything we built." } },
+    { "@type": "Question", "name": "What happens when it breaks?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Every Spencer deployment includes monitoring. We see failures the moment they happen — usually before the client does. Project engagements include a 30-day support window; retainer clients get continuous monitoring." } },
+    { "@type": "Question", "name": "What if I want to leave? Am I locked in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You own everything we build. All code, configs, credentials, and guides transfer to you on request, at any point. Retainer contracts are month-to-month with 30 days notice. No obligation to continue." } }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
@@ -320,6 +362,7 @@
     <li><a href="#how">How It Works</a></li>
     <li><a href="#proof">Proof</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#book" class="nav-cta">Book a call</a>
 </nav>
@@ -342,21 +385,59 @@
       <div><strong>Starts from</strong>$1,200 project · $3,000/mo retainer</div>
     </div>
 
-    <!-- THE HOOK — LIVE OPS TICKER -->
-    <div class="ops-panel">
-      <div class="ops-panel-header">spencer-ops · live status<span class="badge">LIVE</span></div>
-      <div class="ops-row"><span class="time">06:30</span><span class="status ran">✓</span><span class="job">Newsletter digest synthesised</span><span class="detail">33 emails → 5 signals</span></div>
-      <div class="ops-row"><span class="time">07:00</span><span class="status ran">✓</span><span class="job">Morning brief delivered</span><span class="detail">10 sections · 17 data feeds</span></div>
-      <div class="ops-row"><span class="time">07:25</span><span class="status ran">✓</span><span class="job">Diagnostic heartbeat</span><span class="detail">all green · confidence 9/9</span></div>
-      <div class="ops-row"><span class="time">09:00</span><span class="status pending">⏳</span><span class="job">Market research</span><span class="detail">Tue/Thu/Sat · 13 sections</span></div>
-      <div class="ops-row"><span class="time">10:00</span><span class="status pending">⏳</span><span class="job">Investment scanner</span><span class="detail">76 tickers · Drive auto-sync</span></div>
-      <div class="ops-row"><span class="time">19:00</span><span class="status pending">⏳</span><span class="job">Edge Bet scanner</span><span class="detail">Thu/Fri/Sun · sports picks</span></div>
+    <!-- THE HOOK — LIVE OPS TICKER (dynamic, hydrated from /ops-status.json) -->
+    <div class="ops-panel" id="ops-panel">
+      <div class="ops-panel-header">spencer-ops · <span id="ops-stamp">live status</span><span class="badge" id="ops-badge">LIVE</span></div>
+      <div id="ops-rows">
+        <!-- Static fallback (shown if JS disabled or JSON fetch fails) -->
+        <div class="ops-row"><span class="time">06:30</span><span class="status ran">✓</span><span class="job">Newsletter digest synthesised</span><span class="detail">33 emails → 5 signals</span></div>
+        <div class="ops-row"><span class="time">07:00</span><span class="status ran">✓</span><span class="job">Morning brief delivered</span><span class="detail">10 sections · 17 data feeds</span></div>
+        <div class="ops-row"><span class="time">07:25</span><span class="status ran">✓</span><span class="job">Diagnostic heartbeat</span><span class="detail">all green · confidence 9/9</span></div>
+        <div class="ops-row"><span class="time">09:00</span><span class="status pending">⏳</span><span class="job">Market research</span><span class="detail">Tue/Thu/Sat · 13 sections</span></div>
+        <div class="ops-row"><span class="time">10:00</span><span class="status pending">⏳</span><span class="job">Investment scanner</span><span class="detail">76 tickers · Drive auto-sync</span></div>
+        <div class="ops-row"><span class="time">19:00</span><span class="status pending">⏳</span><span class="job">Edge Bet scanner</span><span class="detail">Thu/Fri/Sun · sports picks</span></div>
+      </div>
       <div class="ops-divider"></div>
-      <div class="ops-footer">7 scheduled jobs running · 120+ files auto-synced to Drive · Edge Bet tracker: 8W 8L · economic dashboard refreshing bi-monthly · last heartbeat 09:25 AEST</div>
+      <div class="ops-footer" id="ops-footer">7 scheduled jobs running · 120+ files auto-synced to Drive · Edge Bet tracker: 8W 8L · economic dashboard refreshing bi-monthly · last heartbeat green</div>
     </div>
     <p class="ops-caption">
       <span class="serif">This is real.</span> It runs every morning. Yours could too.
     </p>
+
+    <script>
+    // Hydrate the ops panel from /ops-status.json (updated hourly by the Mac mini cron).
+    // Static content above serves as graceful fallback if fetch fails.
+    (function(){
+      fetch('/ops-status.json?t=' + Date.now())
+        .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+        .then(function(d){
+          var rows = d.jobs_today || [];
+          if (!rows.length) return;
+          var html = '';
+          rows.forEach(function(r){
+            var icon = r.status === 'ran' ? '✓' : (r.status === 'failed' ? '✗' : '⏳');
+            var cls  = r.status === 'ran' ? 'ran' : 'pending';
+            html += '<div class="ops-row">' +
+                      '<span class="time">' + r.time + '</span>' +
+                      '<span class="status ' + cls + '">' + icon + '</span>' +
+                      '<span class="job">' + r.label + '</span>' +
+                      '<span class="detail">' + (r.detail || '') + '</span>' +
+                    '</div>';
+          });
+          document.getElementById('ops-rows').innerHTML = html;
+          var stamp = document.getElementById('ops-stamp');
+          if (stamp && d.generated_display) stamp.textContent = 'updated ' + d.generated_display;
+          var fo = d.footer || {};
+          var parts = [];
+          if (fo.active_crons) parts.push(fo.active_crons + ' scheduled jobs');
+          if (fo.drive_files_synced) parts.push(fo.drive_files_synced + '+ files auto-synced to Drive');
+          if (fo.edge_bet_record) parts.push('Edge Bet: ' + fo.edge_bet_record);
+          if (fo.heartbeat_last) parts.push('heartbeat ' + fo.heartbeat_last);
+          document.getElementById('ops-footer').textContent = parts.join(' · ');
+        })
+        .catch(function(){ /* keep static fallback */ });
+    })();
+    </script>
   </div>
 </section>
 
@@ -550,6 +631,77 @@
           <li>Proactive opportunity surfacing</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="background:var(--cream-lt);">
+  <div class="container">
+    <p class="section-title-sm">Questions</p>
+    <h2 class="section-title">The things you're <em>already thinking</em>.</h2>
+    <p class="section-intro">
+      Honest answers to the objections that come up in every discovery call. If yours isn't here, the call is the place to raise it — that's the whole point of the 30 minutes.
+    </p>
+
+    <div style="margin-top:44px; display:flex; flex-direction:column; gap:14px;">
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">What's the difference between Spencer and using Claude / ChatGPT myself?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          Claude and ChatGPT are raw tools. Powerful, but you still have to know what to build, how to build it, how to connect it to your calendar / email / data, how to maintain it when it breaks. Spencer is the operation built around those tools — we design it, connect it, run it, monitor it, and improve it. You don't talk to Claude. You talk to us. We talk to Claude.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">What about my data and privacy?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          Your data stays in systems you control — your Google Drive, your email account, your calendar. We don't store your private data on our own servers. Every integration runs against APIs or accounts in your name, authenticated via your credentials. When you stop working with us, we hand you everything — code, configs, guides — and walk away. No lock-in, no data captured.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">What happens when it breaks?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          Every Spencer deployment includes monitoring. We see failures the moment they happen — usually before the client does. For project engagements, we fix issues within a 30-day support window. For retainer clients, it's continuous. Our own Spencer has a diagnostic heartbeat that alerts us on silent failures; we bake the same into everything we build.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">Why not just hire an in-house operations person?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          Because for most small businesses, the work is lumpy — some months intense, others quiet. Hiring a full-time ops person means paying full-time cost for part-time value. Spencer gives you senior operational thinking plus the build capability, sized to what you actually need. If the work grows to where you need a full-time hire, we'll tell you — and help you design the role.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">What if I want to leave? Am I locked in?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          You own everything we build. All code, configs, credentials, and guides transfer to you on request — at any point, for any reason. Retainer contracts are month-to-month with 30 days notice. The project tier is one-off; no obligation to continue. This is deliberate — lock-in makes for bad consultants. We stay because the work is valuable, not because you can't leave.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">How technical do I need to be?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          Not at all. Spencer's clients range from tradies to executives. You need to know your business — we handle the technical side. Every system comes with a plain-language guide written for the person who has to actually use it. If something ever needs your attention, we bring it to you in English, not code.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">Is AI actually ready for this?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          For the kinds of work Spencer handles — sorting information, drafting documents, monitoring and alerting, summarising, following repeatable processes — yes, unambiguously. For judgement calls that need deep context, relationship-building, or creative vision, AI isn't ready and won't be soon. Our job is knowing which is which. We put AI on the right tasks, leave you free for the parts only you can do.
+        </p>
+      </details>
+
+      <details style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px;">
+        <summary style="font-weight:600; font-size:16.5px; cursor:pointer; list-style:none; color:var(--ink);">How do you price this compared to agencies?</summary>
+        <p style="margin-top:14px; color:var(--mid); font-size:14.5px; line-height:1.65;">
+          Traditional AI consultancies bill $300-500 AUD per hour, often for discovery that goes nowhere. Our project engagements are fixed-price — you know the cost before we start, and we're incentivised to deliver efficiently. Retainers are inclusive of build work each month, not an hourly meter. Discovery is free because it's how we figure out if there's even a fit.
+        </p>
+      </details>
+
     </div>
   </div>
 </section>
