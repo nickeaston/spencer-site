@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usespencer.com/sitemap.xml
