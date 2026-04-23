@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-23T10:15:01.078773+10:00",
-  "generated_display": "10:15am AEST \u00b7 23 Apr 2026",
+  "generated_at": "2026-04-23T20:00:01.436364+10:00",
+  "generated_display": "8:00pm AEST \u00b7 23 Apr 2026",
   "weekday": "Thursday",
   "jobs_today": [
     {
@@ -42,7 +42,7 @@
     {
       "time": "7pm",
       "label": "Edge Bet scanner",
-      "status": "pending",
+      "status": "ran",
       "detail": "8W 8L \u00b7 bank $47.68"
     }
   ],
