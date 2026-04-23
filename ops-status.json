@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-23T20:00:01.436364+10:00",
-  "generated_display": "8:00pm AEST \u00b7 23 Apr 2026",
-  "weekday": "Thursday",
+  "generated_at": "2026-04-24T07:10:01.106645+10:00",
+  "generated_display": "7:10am AEST \u00b7 24 Apr 2026",
+  "weekday": "Friday",
   "jobs_today": [
     {
       "time": "3am",
@@ -13,7 +13,7 @@
       "time": "6:30am",
       "label": "Newsletter digest synthesised",
       "status": "ran",
-      "detail": "41 newsletters synthesised"
+      "detail": "38 newsletters synthesised"
     },
     {
       "time": "7am",
@@ -24,25 +24,19 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "ran",
+      "status": "pending",
       "detail": "all green"
-    },
-    {
-      "time": "9am",
-      "label": "Market research",
-      "status": "ran",
-      "detail": "Tue/Thu/Sat \u00b7 13 sections"
     },
     {
       "time": "10am",
       "label": "Investment scanner",
-      "status": "ran",
+      "status": "pending",
       "detail": "86 tickers \u00b7 Drive auto-sync"
     },
     {
       "time": "7pm",
       "label": "Edge Bet scanner",
-      "status": "ran",
+      "status": "pending",
       "detail": "8W 8L \u00b7 bank $47.68"
     }
   ],
