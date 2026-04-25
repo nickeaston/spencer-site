@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T07:10:01.147318+10:00",
-  "generated_display": "7:10am AEST \u00b7 26 Apr 2026",
+  "generated_at": "2026-04-26T09:15:00.942869+10:00",
+  "generated_display": "9:15am AEST \u00b7 26 Apr 2026",
   "weekday": "Sunday",
   "jobs_today": [
     {
@@ -24,14 +24,14 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "pending",
+      "status": "ran",
       "detail": "all green"
     },
     {
       "time": "9am",
       "label": "Edge Bet scanner",
-      "status": "pending",
-      "detail": "8W 8L \u00b7 bank $47.68"
+      "status": "ran",
+      "detail": "8W 8L \u00b7 bank $91.67"
     }
   ],
   "footer": {
