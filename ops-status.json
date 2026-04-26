@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-26T09:15:00.942869+10:00",
-  "generated_display": "9:15am AEST \u00b7 26 Apr 2026",
-  "weekday": "Sunday",
+  "generated_at": "2026-04-27T07:10:01.171319+10:00",
+  "generated_display": "7:10am AEST \u00b7 27 Apr 2026",
+  "weekday": "Monday",
   "jobs_today": [
     {
       "time": "3am",
@@ -13,7 +13,7 @@
       "time": "6:30am",
       "label": "Newsletter digest synthesised",
       "status": "ran",
-      "detail": "13 newsletters synthesised"
+      "detail": "14 newsletters synthesised"
     },
     {
       "time": "7am",
@@ -24,14 +24,8 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "ran",
+      "status": "pending",
       "detail": "all green"
-    },
-    {
-      "time": "9am",
-      "label": "Edge Bet scanner",
-      "status": "ran",
-      "detail": "8W 8L \u00b7 bank $91.67"
     }
   ],
   "footer": {
