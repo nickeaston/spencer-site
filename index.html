@@ -714,6 +714,9 @@
       <p style="text-align:center; margin-top:14px; font-size:13.5px; color:var(--mid);">
         Prefer email? Write to <a href="mailto:welcome@myspencer.ai" style="color:var(--gold); font-weight:600;">welcome@myspencer.ai</a> — we reply within one business day.
       </p>
+      <p style="text-align:center; margin-top:10px; font-size:12px; color:var(--mid); line-height:1.55;">
+        By booking a call you agree to our <a href="/privacy.html" style="color:var(--gold);">Privacy Policy</a>, <a href="/terms.html" style="color:var(--gold);">Terms</a>, and <a href="/disclaimer.html" style="color:var(--gold);">Disclaimer</a>. Spencer provides general information and AI-operations consulting — not personal financial, legal, tax or medical advice.
+      </p>
     </div>
   </div>
 </section>
@@ -733,14 +736,46 @@
       </div>
       <div>
         <strong style="color:var(--white); font-size:13px; display:block; margin-bottom:8px;">Get in touch</strong>
-        <a href="#book">Book a discovery call →</a>
+        <a href="#book">Book a discovery call →</a><br/>
+        <a href="mailto:welcome@myspencer.ai">welcome@myspencer.ai</a>
+      </div>
+      <div>
+        <strong style="color:var(--white); font-size:13px; display:block; margin-bottom:8px;">Legal</strong>
+        <a href="/privacy.html">Privacy Policy</a><br/>
+        <a href="/terms.html">Terms of Service</a><br/>
+        <a href="/disclaimer.html">Disclaimer</a>
       </div>
     </div>
-    <div class="footer-legal">
-      Spencer is a service of Easton Enterprises, Australia. © 2026. All work delivered under our written engagement terms.
+    <div class="footer-legal" style="margin-top:24px;">
+      Spencer is a service of Easton Enterprises, Melbourne, Victoria, Australia. &copy; 2026. All work delivered under our written engagement terms.<br/>
+      <span style="display:block; margin-top:10px; opacity:0.85;">
+        <strong>Important:</strong> Spencer is a productivity and AI-operations service. Any market, investment or financial commentary produced by Spencer is general information only and is not personal financial, legal, tax or medical advice. AI-generated content can contain errors and should be reviewed before relying on it. See our <a href="/disclaimer.html">full disclaimer</a>.
+      </span>
     </div>
   </div>
 </footer>
+
+<!-- COOKIE / ANALYTICS NOTICE -->
+<div id="cf-notice" style="display:none; position:fixed; bottom:18px; left:18px; right:18px; max-width:520px; margin:0 auto; background:var(--ink); color:var(--cream-lt); padding:14px 18px; border-radius:var(--radius-sm); box-shadow:0 8px 30px rgba(0,0,0,0.25); font-size:13px; line-height:1.55; z-index:200;">
+  This site uses Cloudflare's privacy-first, cookieless web analytics. No tracking cookies. By continuing, you accept our <a href="/privacy.html" style="color:var(--gold-lt); text-decoration:underline;">Privacy Policy</a> and <a href="/terms.html" style="color:var(--gold-lt); text-decoration:underline;">Terms</a>.
+  <button id="cf-notice-dismiss" style="margin-left:10px; background:var(--gold); color:var(--white); border:0; padding:6px 14px; border-radius:4px; cursor:pointer; font-weight:600; font-size:12.5px;">Got it</button>
+</div>
+<script>
+  (function(){
+    try {
+      if (!localStorage.getItem('cf-notice-dismissed')) {
+        var n = document.getElementById('cf-notice');
+        if (n) n.style.display = 'block';
+      }
+      var b = document.getElementById('cf-notice-dismiss');
+      if (b) b.addEventListener('click', function(){
+        try { localStorage.setItem('cf-notice-dismissed','1'); } catch(e){}
+        var n = document.getElementById('cf-notice');
+        if (n) n.style.display = 'none';
+      });
+    } catch(e){}
+  })();
+</script>
 
 </body>
 </html>
