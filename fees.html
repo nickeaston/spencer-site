@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spencer-as-a-Service — Fee &amp; Service Structure</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ---- myspencer.ai palette ----
+       cream:     #BFB09A  (page bg)
+       cream-lt:  #D4C8B4  (border)
+       warm-bg:   #B3A38C  (warm section)
+       white:     #FDFCF8  (cards / inner)
+       ink:       #1A1814  (text + dark sections)
+       mid:       #5C5751  (body text)
+       muted:     #8A8278  (secondary text)
+       gold:      #7A5C2E  (accent)
+       gold-lt:   #EDE3CC  (badge / pill bg)
+       border-dk: #A89880
+    */
+
+    body {
+      background-color: #BFB09A;
+      color: #1A1814;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .animate { animation: fadeUp 0.55s ease both; }
+    .animate-delay-1 { animation-delay: 0.08s; }
+    .animate-delay-2 { animation-delay: 0.16s; }
+    .animate-delay-3 { animation-delay: 0.24s; }
+    .animate-delay-4 { animation-delay: 0.32s; }
+    .animate-delay-5 { animation-delay: 0.40s; }
+    .animate-delay-6 { animation-delay: 0.48s; }
+
+    /* ---- HERO HEADER ---- */
+    .hero {
+      background-color: #BFB09A;
+      padding: 96px 48px 80px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid #A89880;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(122,92,46,0.10) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background-color: #EDE3CC;
+      color: #7A5C2E;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      animation: fadeIn 0.6s ease both;
+    }
+    .hero h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: #1A1814;
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease 0.1s both;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: #7A5C2E;
+      font-weight: 500;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, #7A5C2E, #A89880, #7A5C2E);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite 0.8s;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      color: #5C5751;
+      max-width: 620px;
+      line-height: 1.7;
+      animation: fadeUp 0.6s ease 0.2s both;
+    }
+
+    /* ---- PAGE BODY ---- */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 48px 60px;
+    }
+
+    /* ---- SECTION WRAPPERS ---- */
+    .section-wrap {
+      padding: 56px 0 0;
+    }
+    .section-wrap.alt {
+      background: #FDFCF8;
+      margin: 48px -48px 0;
+      padding: 56px 48px 8px;
+      border-top: 1px solid #D4C8B4;
+      border-bottom: 1px solid #D4C8B4;
+    }
+    .section-wrap.dark {
+      background: #1A1814;
+      margin: 48px -48px 0;
+      padding: 56px 48px 8px;
+      color: #FDFCF8;
+    }
+    .section-wrap.soft {
+      background: #EDE3CC;
+      margin: 48px -48px 0;
+      padding: 56px 48px 8px;
+      border-top: 1px solid #A89880;
+      border-bottom: 1px solid #A89880;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #7A5C2E;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #1A1814;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #D4C8B4;
+    }
+    .section-wrap.dark .section-title {
+      color: #FDFCF8;
+      border-bottom-color: #2A2820;
+    }
+
+    .section-intro {
+      font-size: 14.5px;
+      color: #5C5751;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .section-wrap.dark .section-intro { color: #BFB09A; }
+
+    /* ---- INCLUDED GRID ---- */
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-bottom: 48px;
+    }
+
+    .included-item {
+      background: #FDFCF8;
+      border: 1px solid #D4C8B4;
+      border-radius: 8px;
+      padding: 22px 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .included-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(26,24,20,0.08);
+      border-color: #A89880;
+    }
+    .section-wrap.dark .included-item {
+      background: #222018;
+      border-color: #2A2820;
+    }
+    .section-wrap.dark .included-item:hover { border-color: #7A5C2E; }
+
+    .included-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #EDE3CC;
+      border: 1px solid #A89880;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .included-item:hover .included-icon-wrap {
+      background: #7A5C2E;
+      border-color: #7A5C2E;
+    }
+    .included-item:hover .included-icon-wrap svg { stroke: #FDFCF8; }
+    .section-wrap.dark .included-icon-wrap {
+      background: #2A2820;
+      border-color: #3A3628;
+    }
+
+    .included-icon-wrap svg {
+      width: 18px;
+      height: 18px;
+      stroke: #7A5C2E;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.2s ease;
+    }
+    .section-wrap.dark .included-icon-wrap svg { stroke: #EDE3CC; }
+
+    .included-item strong {
+      display: block;
+      font-size: 13.5px;
+      color: #1A1814;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+    .section-wrap.dark .included-item strong { color: #FDFCF8; }
+
+    .included-item p {
+      font-size: 12.5px;
+      color: #5C5751;
+      line-height: 1.6;
+    }
+    .section-wrap.dark .included-item p { color: #8A8278; }
+
+    /* ---- PHILOSOPHY ---- */
+    .philosophy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-bottom: 48px;
+    }
+
+    .philosophy-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 22px;
+      background: #FDFCF8;
+      border: 1px solid #D4C8B4;
+      border-radius: 8px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .philosophy-item:hover {
+      border-color: #7A5C2E;
+      box-shadow: 0 4px 16px rgba(122,92,46,0.10);
+    }
+
+    .philosophy-num {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #7A5C2E;
+      background: #EDE3CC;
+      border: 1px solid #A89880;
+      border-radius: 6px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .philosophy-item p {
+      font-size: 14.5px;
+      color: #1A1814;
+      line-height: 1.65;
+    }
+
+    /* ---- CONTEXT LANE CARDS ---- */
+    .lanes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-bottom: 48px;
+    }
+
+    .lane {
+      background: #222018;
+      border: 1px solid #2A2820;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .lane:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+      border-color: #7A5C2E;
+    }
+
+    .lane-header {
+      background-color: #1A1814;
+      padding: 22px 22px 18px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid #2A2820;
+    }
+    .lane-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #7A5C2E, #A89880);
+    }
+
+    .lane-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #EDE3CC;
+      margin-bottom: 6px;
+    }
+
+    .lane-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 19px;
+      font-weight: 500;
+      color: #FDFCF8;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .lane-price {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #EDE3CC;
+      letter-spacing: -0.01em;
+    }
+
+    .lane-price-note {
+      font-size: 10.5px;
+      color: #8A8278;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .lane-body {
+      padding: 18px 22px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: #222018;
+    }
+
+    .lane-desc {
+      font-size: 13px;
+      color: #BFB09A;
+      line-height: 1.65;
+    }
+
+    .lane-jobs-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #EDE3CC;
+    }
+
+    .lane-jobs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .lane-jobs li {
+      font-size: 12.5px;
+      color: #BFB09A;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.55;
+    }
+    .lane-jobs li::before {
+      content: '→';
+      color: #EDE3CC;
+      flex-shrink: 0;
+      font-size: 11px;
+      margin-top: 1px;
+    }
+
+    /* ---- PRICE DRIVERS TABLE ---- */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      padding-bottom: 48px;
+      display: table;
+    }
+    .price-table thead tr { border-bottom: 2px solid #D4C8B4; }
+
+    .price-table thead th {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #7A5C2E;
+      padding: 0 16px 12px 0;
+      text-align: left;
+    }
+    .price-table thead th:first-child { width: 32%; }
+
+    .price-table tbody tr { border-bottom: 1px solid #D4C8B4; }
+    .price-table tbody tr:last-child { border-bottom: none; }
+
+    .price-table tbody td {
+      padding: 14px 16px 14px 0;
+      vertical-align: top;
+    }
+    .price-table tbody td:first-child { color: #1A1814; font-weight: 600; }
+    .price-table tbody td:nth-child(2) { color: #5C5751; }
+    .price-table tbody td:nth-child(3) { color: #7A5C2E; font-weight: 600; }
+
+    /* ---- PROCESS STEPS ---- */
+    .process {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-bottom: 48px;
+    }
+    .process-step {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 44px;
+      bottom: -1px;
+      width: 2px;
+      background: linear-gradient(to bottom, #7A5C2E, #D4C8B4);
+    }
+    .process-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .process-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1A1814;
+      border: 2px solid #7A5C2E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #EDE3CC;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .process-content {
+      padding: 8px 0 32px;
+    }
+    .process-content h4 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #1A1814;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .process-content p {
+      font-size: 13.5px;
+      color: #5C5751;
+      line-height: 1.65;
+    }
+
+    /* ---- WHY WE DO IT ---- */
+    .why-box {
+      background: #EDE3CC;
+      border: 1px solid #A89880;
+      border-left: 3px solid #7A5C2E;
+      border-radius: 8px;
+      padding: 22px 26px;
+      margin-bottom: 48px;
+    }
+    .why-box .why-label {
+      font-size: 14.5px;
+      color: #7A5C2E;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .why-box p {
+      font-size: 14px;
+      color: #1A1814;
+      line-height: 1.7;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer-wrap {
+      background: #1A1814;
+      margin: 48px -48px 0;
+      padding: 36px 48px;
+    }
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-brand {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #FDFCF8;
+      letter-spacing: -0.01em;
+    }
+    .footer-brand .dot { color: #7A5C2E; }
+    .footer-contact {
+      font-size: 12.5px;
+      color: #8A8278;
+      text-align: right;
+      line-height: 1.8;
+    }
+    .footer-contact a { color: #EDE3CC; text-decoration: none; }
+    .footer-contact a:hover { color: #7A5C2E; }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 720px) {
+      .hero { padding: 64px 24px 56px; }
+      .hero h1 { font-size: 32px; }
+      .page { padding: 0 24px 60px; }
+      .lanes, .included-grid { grid-template-columns: 1fr; }
+      .section-wrap.alt, .section-wrap.dark { margin: 40px -24px 0; padding: 40px 24px 8px; }
+      .footer-wrap { margin: 40px -24px 0; padding: 28px 24px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-contact { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Fee &amp; Service Structure</div>
+      <h1>Spencer-as-a-Service<br><em>How We Work &amp; What It Costs</em></h1>
+      <p class="hero-subtitle">Every engagement starts with a problem, not a package. We learn your situation, define the outcome, and price the job. Nothing ships without a written scope.</p>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- SECTION 1 — ALWAYS INCLUDED -->
+    <div class="section-wrap alt animate">
+      <div class="section-label">01 &nbsp;/&nbsp; What You Always Get</div>
+      <h2 class="section-title">Always Included. No Exceptions.</h2>
+      <p class="section-intro">Before a dollar is spent, before a line of code is written, these are guaranteed on every engagement.</p>
+
+      <div class="included-grid">
+
+        <div class="included-item animate animate-delay-1">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <strong>Free Discovery Call</strong>
+          <p>We learn your problem together. No agenda, no pitch &mdash; just an honest conversation about what you need.</p>
+        </div>
+
+        <div class="included-item animate animate-delay-2">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+          </div>
+          <strong>Free Written Proposal</strong>
+          <p>Tailored scope, fixed cost, delivery timeline &mdash; always free. If it's not the right fit, keep it.</p>
+        </div>
+
+        <div class="included-item animate animate-delay-3">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <strong>Written Acceptance Before Work Starts</strong>
+          <p>Nothing begins without a signed-off scope. Scope changes are re-quoted and re-accepted &mdash; no surprises.</p>
+        </div>
+
+        <div class="included-item animate animate-delay-4">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <strong>Plain-English Handover Guide</strong>
+          <p>Every build comes with documentation you can own and operate. No dependency on us to keep the lights on.</p>
+        </div>
+
+        <div class="included-item animate animate-delay-5">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <strong>No Lock-In</strong>
+          <p>Every engagement is a defined job. When it's done, it's done. No ongoing obligations unless we agree otherwise.</p>
+        </div>
+
+        <div class="included-item animate animate-delay-6">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <strong>2-Week Follow-Up Window</strong>
+          <p>Post-delivery support on every job. No clock-watching.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 2 — PHILOSOPHY -->
+    <div class="section-wrap animate animate-delay-1">
+      <div class="section-label">02 &nbsp;/&nbsp; How We Approach It</div>
+      <h2 class="section-title">Problem First. <em style="font-style:italic;color:#7A5C2E;">Solution Second.</em></h2>
+      <p class="section-intro">Most clients don't arrive with a defined problem &mdash; they arrive with a feeling that something could be better. That's exactly where we start.</p>
+
+      <ul class="philosophy-list">
+        <li class="philosophy-item animate animate-delay-1">
+          <span class="philosophy-num">1</span>
+          <p>We learn your situation, your business, and what you're trying to achieve. You don't need to know what the solution looks like before we talk.</p>
+        </li>
+        <li class="philosophy-item animate animate-delay-2">
+          <span class="philosophy-num">2</span>
+          <p>The discovery call is free. The written proposal is free. You receive a tailored scope, cost, and timeline before spending a dollar &mdash; no obligation, no pressure. If it's not the right fit, keep it.</p>
+        </li>
+        <li class="philosophy-item animate animate-delay-3">
+          <span class="philosophy-num">3</span>
+          <p>Every job is bespoke. We don't sell packages &mdash; we solve specific problems for specific people. The solution is built around you.</p>
+        </li>
+        <li class="philosophy-item animate animate-delay-4">
+          <span class="philosophy-num">4</span>
+          <p>If scope changes mid-engagement, we stop, re-scope, re-quote, and get written acceptance before continuing. No silent creep. No surprises on the invoice.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SECTION 3 — CONTEXT LANES -->
+    <div class="section-wrap dark animate">
+      <div class="section-label">03 &nbsp;/&nbsp; Context Lanes</div>
+      <h2 class="section-title">Who We Work With</h2>
+      <p class="section-intro">These aren't packages &mdash; they're reference points. Price is always set by the specific job. Bring us the problem; we'll tell you what it costs.</p>
+
+      <div class="lanes">
+
+        <div class="lane animate animate-delay-1">
+          <div class="lane-header">
+            <div class="lane-tag">Personal</div>
+            <div class="lane-title">Lifestyle &amp; Personal Productivity</div>
+            <div class="lane-price">From AUD $500</div>
+            <div class="lane-price-note">per job &nbsp;·&nbsp; scoped to outcome</div>
+          </div>
+          <div class="lane-body">
+            <p class="lane-desc">You want something in your life to work smarter, faster, or with less manual effort. Social presence, personal organisation, information flows.</p>
+            <div class="lane-jobs-label">Typical jobs</div>
+            <ul class="lane-jobs">
+              <li>Automated briefing or research digest</li>
+              <li>Social content pipeline setup</li>
+              <li>Personal scheduling and inbox systems</li>
+              <li>Information tracking and alerting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lane animate animate-delay-2">
+          <div class="lane-header">
+            <div class="lane-tag">Own Business</div>
+            <div class="lane-title">Founders &amp; Operators</div>
+            <div class="lane-price">From AUD $500</div>
+            <div class="lane-price-note">per job &nbsp;·&nbsp; building from scratch can be as involved as any enterprise job &mdash; price reflects what needs to be built</div>
+          </div>
+          <div class="lane-body">
+            <p class="lane-desc">You're building something and need it to run smarter. Operations, pipeline, research, client management &mdash; anything slowing you down.</p>
+            <div class="lane-jobs-label">Typical jobs</div>
+            <ul class="lane-jobs">
+              <li>Operational automation and workflow builds</li>
+              <li>Business intelligence and reporting</li>
+              <li>Client and pipeline tooling</li>
+              <li>Custom AI tools for your context</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lane animate animate-delay-3">
+          <div class="lane-header">
+            <div class="lane-tag">Enterprise</div>
+            <div class="lane-title">Business Integration</div>
+            <div class="lane-price">From AUD $2,500</div>
+            <div class="lane-price-note">per job &nbsp;·&nbsp; stakeholder &amp; stack complexity reflected in scope</div>
+          </div>
+          <div class="lane-body">
+            <p class="lane-desc">An established business with existing systems, multiple stakeholders, and a tech stack that needs to work together. Higher complexity, higher accountability.</p>
+            <div class="lane-jobs-label">Typical jobs</div>
+            <ul class="lane-jobs">
+              <li>AI layer integration into existing infrastructure</li>
+              <li>Cross-system automation and data flows</li>
+              <li>Team-facing intelligence tools</li>
+              <li>Architecture design and implementation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 4 — PRICE DRIVERS (was 05) -->
+    <div class="section-wrap soft animate">
+      <div class="section-label">04 &nbsp;/&nbsp; Variables</div>
+      <h2 class="section-title">What Drives the Price</h2>
+      <p class="section-intro">Every job is priced on its specifics. These are the factors that move the number.</p>
+
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Lower end</th>
+            <th>Higher end</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Problem complexity</td>
+            <td>Single, well-defined outcome</td>
+            <td>Multi-layered problem requiring diagnosis</td>
+          </tr>
+          <tr>
+            <td>Build time</td>
+            <td>Less than 4 hours</td>
+            <td>More than 20 hours</td>
+          </tr>
+          <tr>
+            <td>Integrations required</td>
+            <td>Standalone tool or system</td>
+            <td>Multi-system, existing stack to work with</td>
+          </tr>
+          <tr>
+            <td>Stakeholders involved</td>
+            <td>Individual</td>
+            <td>Team, business, or enterprise</td>
+          </tr>
+          <tr>
+            <td>Ongoing maintenance</td>
+            <td>None &mdash; handed over clean</td>
+            <td>Active monitoring and iteration required</td>
+          </tr>
+          <tr>
+            <td>Urgency</td>
+            <td>Standard (5&ndash;7 day delivery)</td>
+            <td>Expedited (&lt;48h, +25%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SECTION 5 — OWNERSHIP (was 06) -->
+    <div class="section-wrap alt animate">
+      <div class="section-label">05 &nbsp;/&nbsp; Ownership</div>
+      <h2 class="section-title">What's Not Included &mdash; And Why That's the Point</h2>
+      <p class="section-intro">We don't mark up third-party costs. We don't lock you into our infrastructure. Every solution is built for you to own outright &mdash; permanently.</p>
+
+      <div class="included-grid" style="grid-template-columns: repeat(2,1fr); margin-bottom: 28px;">
+
+        <div class="included-item animate animate-delay-1">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <strong>Third-Party LLM Credits</strong>
+          <p>OpenAI, Anthropic, Google &mdash; API costs are billed directly to you at cost. No markup. No dependency on us to keep the service running.</p>
+        </div>
+
+        <div class="included-item animate animate-delay-3">
+          <div class="included-icon-wrap">
+            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <strong>Hosting &amp; Hardware</strong>
+          <p>Compute, servers, and hosting are yours &mdash; not ours. We favour solutions that run on infrastructure you already control or can set up independently.</p>
+        </div>
+
+      </div>
+
+      <div class="why-box">
+        <p class="why-label">Why we do it this way</p>
+        <p>We believe in localised, sustainable ownership. The goal of every engagement is to leave you with a solution that runs independently &mdash; no ongoing fees flowing through us, no single point of failure, no lock-in. When the job is done, the solution is yours entirely.</p>
+        <p style="margin-top:12px;font-style:italic;color:#5C5751;">That said &mdash; if you'd rather we hold the hardware on your behalf, we can explore that avenue.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">Spencer<span class="dot">.</span></div>
+      <div class="footer-contact">
+        <a href="mailto:welcome@myspencer.ai">welcome@myspencer.ai</a> &nbsp;·&nbsp;
+        <a href="https://myspencer.ai" target="_blank">myspencer.ai</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
