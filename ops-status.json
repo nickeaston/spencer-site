@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-27T09:15:01.175889+10:00",
-  "generated_display": "9:15am AEST \u00b7 27 Apr 2026",
-  "weekday": "Monday",
+  "generated_at": "2026-04-28T07:10:01.113616+10:00",
+  "generated_display": "7:10am AEST \u00b7 28 Apr 2026",
+  "weekday": "Tuesday",
   "jobs_today": [
     {
       "time": "3am",
@@ -13,7 +13,7 @@
       "time": "6:30am",
       "label": "Newsletter digest synthesised",
       "status": "ran",
-      "detail": "14 newsletters synthesised"
+      "detail": "36 newsletters synthesised"
     },
     {
       "time": "7am",
@@ -24,8 +24,20 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "ran",
+      "status": "pending",
       "detail": "all green"
+    },
+    {
+      "time": "9am",
+      "label": "Market research",
+      "status": "pending",
+      "detail": "Tue/Thu/Sat \u00b7 13 sections"
+    },
+    {
+      "time": "10am",
+      "label": "Investment scanner",
+      "status": "pending",
+      "detail": "86 tickers \u00b7 Drive auto-sync"
     }
   ],
   "footer": {
