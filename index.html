@@ -356,6 +356,7 @@
   <a href="#" class="nav-logo">Spencer<span class="dot">.</span></a>
   <ul class="nav-links">
     <li><a href="#what">What Spencer Does</a></li>
+    <li><a href="#see-it">See it</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="/fees.html">Fees</a></li>
     <li><a href="#proof">Proof</a></li>
@@ -489,6 +490,312 @@
     </div>
   </div>
 </section>
+
+<!-- SEE SPENCER IN ACTION -->
+<section class="section" id="see-it" style="background:var(--cream-lt);">
+  <div class="container">
+    <p class="section-title-sm">See it in action</p>
+    <h2 class="section-title">Don't take our word — <em>watch it run</em>.</h2>
+    <p class="section-intro">
+      Five short clips. Real Spencer outputs, real client data, real time of day. The brief that lands at 7am. The scan that filters 3,000 stocks before coffee. The voice memo that turns into a working app by lunch. No marketing fluff, no synthetic demos.
+    </p>
+
+    <!-- HERO / MASTER VIDEO -->
+    <div class="demo-hero">
+      <div class="demo-hero-media">
+        <!-- Replace data-youtube-id with the YouTube video ID once filmed.
+             For self-hosted, swap this entire block for a <video> element. -->
+        <div class="demo-hero-poster" data-youtube-id="REPLACE_WITH_HERO_YT_ID">
+          <div class="demo-hero-poster-inner">
+            <div class="demo-play-btn" aria-hidden="true">▶</div>
+            <p class="demo-hero-tag">FEATURED · 2 min 45 sec</p>
+            <h3 class="demo-hero-title">A Day with Spencer</h3>
+            <p class="demo-hero-sub">The full sequence — 7am brief, 10am scan, lunchtime ask, evening report. What it actually feels like to have an AI ops layer running for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUB-VIDEO GRID -->
+    <p class="demo-grid-eyebrow">Or pick a moment that matters to you →</p>
+    <div class="demo-grid">
+
+      <a class="demo-card" href="#" data-youtube-id="REPLACE_WITH_CLIP_1_YT_ID">
+        <div class="demo-card-poster">
+          <div class="demo-card-play" aria-hidden="true">▶</div>
+          <span class="demo-card-duration">0:50</span>
+        </div>
+        <div class="demo-card-meta">
+          <p class="demo-card-eyebrow">MORNING</p>
+          <h4 class="demo-card-title">Morning, sorted in 90 seconds</h4>
+          <p class="demo-card-desc">Calendar, overnight market moves, priority inbox, personal nudge — one tap.</p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="#" data-youtube-id="REPLACE_WITH_CLIP_2_YT_ID">
+        <div class="demo-card-poster">
+          <div class="demo-card-play" aria-hidden="true">▶</div>
+          <span class="demo-card-duration">1:00</span>
+        </div>
+        <div class="demo-card-meta">
+          <p class="demo-card-eyebrow">RESEARCH</p>
+          <h4 class="demo-card-title">Half-formed idea in. Brief out.</h4>
+          <p class="demo-card-desc">Voice memo on a walk → 4-paragraph research memo with bull case, bear case, names to watch.</p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="#" data-youtube-id="REPLACE_WITH_CLIP_3_YT_ID">
+        <div class="demo-card-poster">
+          <div class="demo-card-play" aria-hidden="true">▶</div>
+          <span class="demo-card-duration">0:45</span>
+        </div>
+        <div class="demo-card-meta">
+          <p class="demo-card-eyebrow">INVESTING</p>
+          <h4 class="demo-card-title">3,000 stocks → 8 worth your weekend</h4>
+          <p class="demo-card-desc">Saturday morning scan with live theses, entry zones, and confidence scoring.</p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="#" data-youtube-id="REPLACE_WITH_CLIP_4_YT_ID">
+        <div class="demo-card-poster">
+          <div class="demo-card-play" aria-hidden="true">▶</div>
+          <span class="demo-card-duration">0:45</span>
+        </div>
+        <div class="demo-card-meta">
+          <p class="demo-card-eyebrow">FAMILY</p>
+          <h4 class="demo-card-title">Dinner plan + grocery cart in 4 minutes</h4>
+          <p class="demo-card-desc">Voice memo to Spencer → meal plan for the week → Coles cart pre-built, ready to approve.</p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="#" data-youtube-id="REPLACE_WITH_CLIP_5_YT_ID">
+        <div class="demo-card-poster">
+          <div class="demo-card-play" aria-hidden="true">▶</div>
+          <span class="demo-card-duration">1:00</span>
+        </div>
+        <div class="demo-card-meta">
+          <p class="demo-card-eyebrow">BUILD</p>
+          <h4 class="demo-card-title">Idea to working app, same afternoon</h4>
+          <p class="demo-card-desc">Voice brief at lunch → working web app on your phone by close-of-business.</p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="#" data-youtube-id="REPLACE_WITH_CLIP_6_YT_ID">
+        <div class="demo-card-poster">
+          <div class="demo-card-play" aria-hidden="true">▶</div>
+          <span class="demo-card-duration">1:00</span>
+        </div>
+        <div class="demo-card-meta">
+          <p class="demo-card-eyebrow">FROM NICK</p>
+          <h4 class="demo-card-title">Why I built Spencer</h4>
+          <p class="demo-card-desc">Why an AI ops layer made sense for me — and how to know if it'd make sense for you.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="demo-disclaimer">All clips are real Spencer outputs running on real client data — no staged screens, no synthetic content. Filmed at the actual time of day each workflow fires.</p>
+  </div>
+</section>
+
+<!-- Lightweight modal player — fires when a demo card or hero is clicked. Loads YouTube in nocookie mode. -->
+<div id="demo-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div id="demo-modal-backdrop"></div>
+  <div id="demo-modal-frame">
+    <button id="demo-modal-close" aria-label="Close video">×</button>
+    <div id="demo-modal-player"></div>
+  </div>
+</div>
+
+<style>
+  /* SEE SPENCER IN ACTION — section */
+  #see-it .demo-hero { margin: 32px 0 56px; }
+  #see-it .demo-hero-media {
+    position: relative; aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--ink) 0%, #2c2620 60%, var(--gold) 130%);
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 24px 48px rgba(26, 24, 20, 0.18);
+    cursor: pointer;
+  }
+  #see-it .demo-hero-poster {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.35s ease;
+  }
+  #see-it .demo-hero-media:hover .demo-hero-poster { transform: scale(1.015); }
+  #see-it .demo-hero-poster-inner {
+    text-align: center; max-width: 620px; padding: 0 32px; color: var(--white);
+  }
+  #see-it .demo-play-btn {
+    width: 76px; height: 76px; margin: 0 auto 22px;
+    border-radius: 50%; background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; color: var(--white); padding-left: 6px;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+  #see-it .demo-hero-media:hover .demo-play-btn {
+    background: var(--gold); border-color: var(--gold); transform: scale(1.06);
+  }
+  #see-it .demo-hero-tag {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+    color: var(--gold-lt); text-transform: uppercase; margin-bottom: 14px;
+  }
+  #see-it .demo-hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px; font-weight: 600; line-height: 1.15;
+    margin-bottom: 10px; color: var(--white); font-style: italic;
+  }
+  #see-it .demo-hero-sub {
+    font-size: 15px; line-height: 1.6; color: var(--cream-lt);
+    margin: 0 auto; max-width: 520px;
+  }
+
+  #see-it .demo-grid-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold);
+    margin: 0 0 18px; text-align: center;
+  }
+  #see-it .demo-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    margin-bottom: 28px;
+  }
+  #see-it .demo-card {
+    background: var(--white); border-radius: var(--radius); overflow: hidden;
+    text-decoration: none; color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex; flex-direction: column;
+    border: 1px solid var(--border);
+  }
+  #see-it .demo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(26, 24, 20, 0.12);
+  }
+  #see-it .demo-card-poster {
+    aspect-ratio: 16 / 9; position: relative;
+    background: linear-gradient(135deg, #3a322a 0%, #1A1814 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  #see-it .demo-card-play {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(255,255,255,0.14); backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-size: 18px; padding-left: 4px;
+    transition: background 0.25s ease;
+  }
+  #see-it .demo-card:hover .demo-card-play {
+    background: var(--gold); border-color: var(--gold);
+  }
+  #see-it .demo-card-duration {
+    position: absolute; bottom: 12px; right: 12px;
+    background: rgba(0,0,0,0.55); color: var(--white);
+    font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em;
+    padding: 3px 8px; border-radius: 4px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  #see-it .demo-card-meta { padding: 18px 20px 20px; }
+  #see-it .demo-card-eyebrow {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+  }
+  #see-it .demo-card-title {
+    font-size: 16px; font-weight: 600; line-height: 1.32; color: var(--ink);
+    margin: 0 0 8px;
+  }
+  #see-it .demo-card-desc {
+    font-size: 13.5px; line-height: 1.55; color: var(--mid); margin: 0;
+  }
+  #see-it .demo-disclaimer {
+    text-align: center; font-size: 13px; font-style: italic;
+    color: var(--muted); max-width: 580px; margin: 32px auto 0; line-height: 1.55;
+  }
+
+  /* MODAL PLAYER */
+  #demo-modal[aria-hidden="true"] { display: none; }
+  #demo-modal {
+    position: fixed; inset: 0; z-index: 300;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #demo-modal-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(10, 8, 6, 0.85); backdrop-filter: blur(8px);
+  }
+  #demo-modal-frame {
+    position: relative; z-index: 1; width: min(1100px, 92vw);
+    aspect-ratio: 16 / 9; background: #000;
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  }
+  #demo-modal-player { width: 100%; height: 100%; }
+  #demo-modal-player iframe { width: 100%; height: 100%; border: 0; }
+  #demo-modal-close {
+    position: absolute; top: -42px; right: -4px;
+    background: transparent; border: 0; color: var(--white);
+    font-size: 32px; line-height: 1; cursor: pointer;
+    padding: 4px 10px; font-weight: 300;
+  }
+  #demo-modal-close:hover { color: var(--gold-lt); }
+
+  @media (max-width: 880px) {
+    #see-it .demo-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    #see-it .demo-hero-title { font-size: 28px; }
+    #see-it .demo-hero-sub { font-size: 14px; }
+    #see-it .demo-play-btn { width: 64px; height: 64px; font-size: 22px; }
+  }
+  @media (max-width: 560px) {
+    #see-it .demo-grid { grid-template-columns: 1fr; }
+    #see-it .demo-hero-title { font-size: 24px; }
+    #demo-modal-close { top: -38px; font-size: 28px; }
+  }
+</style>
+
+<script>
+  (function(){
+    var modal   = document.getElementById('demo-modal');
+    var player  = document.getElementById('demo-modal-player');
+    var close   = document.getElementById('demo-modal-close');
+    var back    = document.getElementById('demo-modal-backdrop');
+
+    function openVideo(ytId) {
+      if (!ytId || ytId.indexOf('REPLACE_WITH') === 0) {
+        // Friendly behaviour while videos are not yet wired in
+        alert('Video coming soon — placeholder. Once the YouTube ID is added to this card, clicking will open the player.');
+        return;
+      }
+      player.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeVideo() {
+      player.innerHTML = '';
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Hero
+    var hero = document.querySelector('#see-it .demo-hero-media');
+    if (hero) {
+      hero.addEventListener('click', function(){
+        var poster = hero.querySelector('.demo-hero-poster');
+        openVideo(poster ? poster.getAttribute('data-youtube-id') : null);
+      });
+    }
+    // Sub-cards
+    document.querySelectorAll('#see-it .demo-card').forEach(function(card){
+      card.addEventListener('click', function(e){
+        e.preventDefault();
+        openVideo(card.getAttribute('data-youtube-id'));
+      });
+    });
+
+    if (close) close.addEventListener('click', closeVideo);
+    if (back)  back.addEventListener('click', closeVideo);
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeVideo();
+    });
+  })();
+</script>
 
 <!-- CALLOUT -->
 <section class="section section-warm">
