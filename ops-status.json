@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-30T07:10:35.276582+10:00",
-  "generated_display": "7:10am AEST \u00b7 30 Apr 2026",
+  "generated_at": "2026-04-30T09:15:35.093379+10:00",
+  "generated_display": "9:15am AEST \u00b7 30 Apr 2026",
   "weekday": "Thursday",
   "jobs_today": [
     {
@@ -24,13 +24,13 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "pending",
+      "status": "ran",
       "detail": "all green"
     },
     {
       "time": "9am",
       "label": "Market research",
-      "status": "pending",
+      "status": "ran",
       "detail": "Tue/Thu/Sat \u00b7 13 sections"
     },
     {
