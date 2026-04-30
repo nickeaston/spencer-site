@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-01T07:10:04.823344+10:00",
-  "generated_display": "7:10am AEST \u00b7 1 May 2026",
+  "generated_at": "2026-05-01T09:15:06.526905+10:00",
+  "generated_display": "9:15am AEST \u00b7 1 May 2026",
   "weekday": "Friday",
   "jobs_today": [
     {
@@ -24,7 +24,7 @@
     {
       "time": "7:25am",
       "label": "Diagnostic heartbeat",
-      "status": "pending",
+      "status": "ran",
       "detail": "all green"
     },
     {
@@ -42,7 +42,7 @@
     {
       "time": "7:30am",
       "label": "Economic dashboard refresh",
-      "status": "pending",
+      "status": "ran",
       "detail": "GH Actions \u00b7 1st + 15th"
     }
   ],
