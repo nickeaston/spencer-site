@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-01T09:15:06.526905+10:00",
-  "generated_display": "9:15am AEST \u00b7 1 May 2026",
+  "generated_at": "2026-05-01T10:15:01.644568+10:00",
+  "generated_display": "10:15am AEST \u00b7 1 May 2026",
   "weekday": "Friday",
   "jobs_today": [
     {
@@ -30,7 +30,7 @@
     {
       "time": "10am",
       "label": "Investment scanner",
-      "status": "pending",
+      "status": "ran",
       "detail": "86 tickers \u00b7 Drive auto-sync"
     },
     {
