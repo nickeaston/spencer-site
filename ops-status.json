@@ -1,38 +1,94 @@
 {
-  "generated_at": "2026-05-04T09:15:05.139428+10:00",
-  "generated_display": "9:15am AEST \u00b7 4 May 2026",
+  "generated_at": "2026-05-04T21:19:51+10:00",
+  "generated_display": "9:19PM AEST · 4 May 2026",
   "weekday": "Monday",
   "jobs_today": [
     {
-      "time": "3am",
-      "label": "Reports retention (Stu)",
+      "time": "04:30",
+      "label": "YouTube + podcast digest",
       "status": "ran",
-      "detail": "3am cleanup \u00b7 >14d purged"
+      "detail": "12 sources scanned · 4 takeaways"
     },
     {
-      "time": "6:30am",
-      "label": "Newsletter digest synthesised",
+      "time": "05:30",
+      "label": "Newsletter digest summarised",
       "status": "ran",
-      "detail": "10 newsletters synthesised"
+      "detail": "33 emails → 5 signals"
     },
     {
-      "time": "7am",
+      "time": "06:00",
+      "label": "Intelligence digest combined",
+      "status": "ran",
+      "detail": "YouTube + newsletters → 1 view"
+    },
+    {
+      "time": "06:45",
+      "label": "Overnight news scan",
+      "status": "ran",
+      "detail": "live web · cited sources"
+    },
+    {
+      "time": "07:00",
       "label": "Morning brief delivered",
       "status": "ran",
-      "detail": "10 sections \u00b7 17 live feeds"
+      "detail": "12 sections · 17 data feeds"
     },
     {
-      "time": "7:25am",
-      "label": "Diagnostic heartbeat",
+      "time": "07:25",
+      "label": "🩺 Quality check, all outputs",
       "status": "ran",
-      "detail": "all green"
+      "detail": "size · sections · sources verified"
+    },
+    {
+      "time": "07:30",
+      "label": "🧠 Self-learning loop",
+      "status": "ran",
+      "detail": "yesterday's misses → today's prompts"
+    },
+    {
+      "time": "08:00",
+      "label": "📊 Diagnostic heartbeat",
+      "status": "ran",
+      "detail": "all green · confidence 9/9"
+    },
+    {
+      "time": "08:45",
+      "label": "Market research deep-dive",
+      "status": "pending",
+      "detail": "Tue–Sat · 13 sections · 10 experts"
+    },
+    {
+      "time": "10:00",
+      "label": "Investment scanner",
+      "status": "pending",
+      "detail": "76 assets · live P&L · auto-sync"
+    },
+    {
+      "time": "11:00",
+      "label": "🔍 Output regression check",
+      "status": "pending",
+      "detail": "today vs. gold-standard · floors enforced"
+    },
+    {
+      "time": "19:00",
+      "label": "Edge Bet scanner",
+      "status": "pending",
+      "detail": "Thu/Fri/Sun · 9 sports · 5,000+ markets"
+    },
+    {
+      "time": "21:00",
+      "label": "❤️ Personal health check-in",
+      "status": "pending",
+      "detail": "9pm daily · vitals + habit log"
     }
   ],
   "footer": {
-    "active_crons": 7,
+    "active_crons": 13,
     "drive_files_synced": 120,
-    "edge_bet_record": "8W 8L",
-    "dashboard_last_refresh": "2026-04-20",
-    "heartbeat_last": "green"
+    "edge_bet_record": "13W 12L · +200% ROI",
+    "dashboard_last_refresh": "2026-04-15",
+    "heartbeat_last": "green",
+    "self_learning": "active",
+    "regression_checked": "daily"
   }
 }
