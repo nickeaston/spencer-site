@@ -1,80 +1,99 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Edge Bet Scanner — Example · Spencer</title>
-<meta name="robots" content="noindex, nofollow" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edge Bet Scanner, Sun 3 May 2026</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --cream: #BFB09A; --cream-lt: #D4C8B4; --white: #FDFCF8;
-    --ink: #1A1814; --mid: #5C5751; --muted: #8A8278;
-    --border: #D4C8B4; --gold: #7A5C2E; --gold-lt: #EDE3CC;
-  }
-  body { font-family: 'Inter', system-ui, sans-serif; background: var(--cream); color: var(--ink);
-         -webkit-font-smoothing: antialiased; font-size: 15px; line-height: 1.65; min-height: 100vh; }
-  .topbar { background: rgba(191,176,154,0.96); backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border); padding: 0 32px; height: 58px;
-            display: flex; align-items: center; justify-content: space-between;
-            position: sticky; top: 0; z-index: 10; }
-  .topbar a { font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
-  .topbar a:hover { color: var(--gold); }
-  .topbar .back { color: var(--mid); font-weight: 500; }
-  .banner { background: var(--gold-lt); border-left: 3px solid var(--gold);
-            padding: 14px 20px; font-size: 13px; color: var(--mid);
-            max-width: 820px; margin: 24px auto 0; border-radius: 0 6px 6px 0; }
-  .container { max-width: 820px; margin: 0 auto; padding: 28px 32px 60px; background: var(--white);
-               margin-top: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-  .date { color: var(--muted); font-size: 12.5px; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
-  h1 { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.2;
-        color: var(--ink); margin: 0 0 18px; font-weight: 600; }
-  h2 { font-size: 18px; margin: 32px 0 12px; border-bottom: 2px solid var(--cream-lt);
-        padding-bottom: 6px; color: var(--ink); font-weight: 600; }
-  h3 { font-size: 15px; margin: 20px 0 10px; color: var(--ink); font-weight: 600; }
-  p, li { color: var(--mid); font-size: 14.5px; line-height: 1.65; margin: 0 0 10px; }
-  ul, ol { padding-left: 22px; margin: 6px 0 14px; }
-  strong { color: var(--ink); font-weight: 600; }
-  a { color: var(--gold); text-decoration: none; font-weight: 500; }
-  a:hover { text-decoration: underline; }
-  table { border-collapse: collapse; width: 100%; margin: 14px 0 20px; font-size: 13.5px; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--cream-lt); vertical-align: top; }
-  th { background: var(--gold-lt); font-weight: 600; color: var(--ink); }
-  hr { border: 0; border-top: 1px solid var(--cream-lt); margin: 20px 0; }
-  code { background: var(--cream-lt); padding: 2px 5px; border-radius: 3px; font-size: 12.5px; font-family: 'JetBrains Mono', Menlo, monospace; }
-  .footer { text-align: center; font-size: 12px; color: var(--muted); padding: 28px 20px 10px; }
-  @media (max-width: 720px) { .container { padding: 22px 18px; } h1 { font-size: 22px; } }
-</style></head>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 0 auto; padding: 16px; color: #0f1923; background: #fff; }
+  h2 { font-size: 17px; margin: 24px 0 8px; border-bottom: 2px solid #eef0f3; padding-bottom: 6px; }
+  h3 { font-size: 14px; margin: 12px 0 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { background: #f4f5f7; padding: 6px 8px; border-bottom: 2px solid #d6dae0; text-align: left; }
+  td { padding: 5px 8px; border-bottom: 1px solid #eef0f3; }
+  .chg-pos { color: #2e7d32; font-weight: 600; }
+  .chg-neg { color: #c62828; font-weight: 600; }
+  .urgent-banner { background: #fff3cd; border-left: 4px solid #e65100; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 0 0 14px; }
+</style>
+</head>
 <body>
-<nav class="topbar">
-  <a href="https://myspencer.ai" class="back">← myspencer.ai</a>
-  <a href="https://myspencer.ai/#book">Book a conversation</a>
-</nav>
-<div class="banner">
-  <strong>Example output.</strong> This is a real Spencer report delivered to Nick on the date above.
-  Shown as a sample of what the system produces — your Spencer would be scoped to your world, your markets, your picks.
+
+<div style="text-align:center;padding:10px 0 14px;border-bottom:2px solid #eef0f3;margin-bottom:16px;">
+  <p style="margin:0;font-size:12px;color:#5d6775;text-transform:uppercase;letter-spacing:1px;">Edge Bet Scanner</p>
+  <p style="margin:2px 0 0;font-size:18px;font-weight:700;">Sunday 3 May 2026</p>
+  <p style="margin:2px 0 0;font-size:12px;color:#5d6775;">Run time: 12:48 PM AEST · Spencer Easton</p>
 </div>
-<main class="container">
-<p class="date">Spencer · Edge Bet Scanner — Example · Thursday 23 April 2026</p>
-<h1>Edge Bet Scanner</h1>
 
 <h2>📊 Performance Snapshot</h2>
 
 <div style="background:#eef3f8;border-left:4px solid #1961c2;padding:14px 18px;border-radius:0 8px 8px 0;margin:0 0 18px;">
-  <p style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#5d6775;">Paper Portfolio — pre-settlement</p>
-  <p style="margin:0 0 2px;font-size:18px;font-weight:700;color:#0f1923;">Bank $47.68 <span style="font-size:14px;font-weight:400;color:#5d6775;">/ $50.00 initial</span></p>
-  <p style="margin:0;font-size:13.5px;">Record: <strong>8W / 8L / 5V</strong> · Win: <strong>50.0%</strong> · ROI: <span style="color:#c0392b;">−7.86%</span> · Streak: <strong>4 L</strong> · Max DD: $4.72</p>
-  <p style="margin:4px 0 0;font-size:12px;color:#c0392b;"><strong>⚠️ 3 settlements logged this run (EB-018 / EB-019 / EB-023 — all lost). See SETTLEMENTS block.</strong></p>
+  <p style="margin:0 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#5d6775;">Paper Portfolio</p>
+  <p style="margin:0 0 2px;font-size:18px;font-weight:700;color:#0f1923;">Bank $129.47 <span style="font-size:14px;font-weight:400;color:#5d6775;">/ $50.00 initial</span></p>
+  <p style="margin:0;font-size:13.5px;">Record: <strong>12W / 10L / 5V</strong> · Win: <strong>54.5%</strong> · ROI: <span style="color:#2e7d32;font-weight:700;">+17.28%</span> · Streak: <strong>4L</strong> · Max DD: $23.53</p>
 </div>
 
-<h2>🎯 TL;DR — This Run</h2>
+<h2>🏁 Last 10 Performances</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:9%;">Date</th>
+      <th style="width:13%;">Type</th>
+      <th style="width:32%;">Pick</th>
+      <th style="text-align:right;width:8%;">Odds</th>
+      <th style="text-align:right;width:9%;">Stake</th>
+      <th style="text-align:center;width:14%;">Result</th>
+      <th style="text-align:right;width:10%;">P&L</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="font-size:11px;">05-03</td><td>Standalone</td><td>NRL · Titans H2H vs Raiders</td><td style="text-align:right;">$1.60</td><td style="text-align:right;">$20.00</td><td style="text-align:center;"><span style="background:#ffebee;color:#c62828;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✗ LOST</span></td><td style="text-align:right;" class="chg-neg">−$20.00</td>
+    </tr>
+    <tr style="background:#fafbfc;">
+      <td style="font-size:11px;">05-03</td><td>Multi (3L)</td><td>Fri AFL + Sat NRL 3-legger</td><td style="text-align:right;">$3.42</td><td style="text-align:right;">$10.00</td><td style="text-align:center;"><span style="background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✓ WON</span></td><td style="text-align:right;" class="chg-pos">+$24.19</td>
+    </tr>
+    <tr>
+      <td style="font-size:11px;">04-27</td><td>Multi (3L)</td><td>Anzac Weekend Home Teams</td><td style="text-align:right;">$2.95</td><td style="text-align:right;">$10.00</td><td style="text-align:center;"><span style="background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✓ WON</span></td><td style="text-align:right;" class="chg-pos">+$19.51</td>
+    </tr>
+    <tr style="background:#fafbfc;">
+      <td style="font-size:11px;">04-27</td><td>Multi (3L)</td><td>AFL + NRL + NHL Favourites</td><td style="text-align:right;">$3.13</td><td style="text-align:right;">$16.67</td><td style="text-align:center;"><span style="background:#ffebee;color:#c62828;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✗ LOST</span></td><td style="text-align:right;" class="chg-neg">−$16.67</td>
+    </tr>
+    <tr>
+      <td style="font-size:11px;">04-27</td><td>Multi (3L)</td><td>AFL/NRL/NHL Trifecta</td><td style="text-align:right;">$3.23</td><td style="text-align:right;">$25.00</td><td style="text-align:center;"><span style="background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✓ WON</span></td><td style="text-align:right;" class="chg-pos">+$55.77</td>
+    </tr>
+    <tr style="background:#fafbfc;">
+      <td style="font-size:11px;">04-27</td><td>Multi (3L)</td><td>AFL/NBA Treble</td><td style="text-align:right;">$2.86</td><td style="text-align:right;">$25.00</td><td style="text-align:center;"><span style="background:#ffebee;color:#c62828;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✗ LOST</span></td><td style="text-align:right;" class="chg-neg">−$25.00</td>
+    </tr>
+    <tr>
+      <td style="font-size:11px;">04-26</td><td>Standalone</td><td>NRL · Wests Tigers H2H</td><td style="text-align:right;">$1.52</td><td style="text-align:right;">$1.54</td><td style="text-align:center;"><span style="background:#ffebee;color:#c62828;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✗ LOST</span></td><td style="text-align:right;" class="chg-neg">−$1.54</td>
+    </tr>
+    <tr style="background:#fafbfc;">
+      <td style="font-size:11px;">04-26</td><td>Standalone</td><td>AFL · Geelong Cats H2H</td><td style="text-align:right;">$1.54</td><td style="text-align:right;">$1.54</td><td style="text-align:center;"><span style="background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✓ WON</span></td><td style="text-align:right;" class="chg-pos">+$0.83</td>
+    </tr>
+    <tr>
+      <td style="font-size:11px;">04-26</td><td>Standalone</td><td>NRL · Melbourne Storm H2H</td><td style="text-align:right;">$1.58</td><td style="text-align:right;">$20.00</td><td style="text-align:center;"><span style="background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✓ WON</span></td><td style="text-align:right;" class="chg-pos">+$11.60</td>
+    </tr>
+    <tr style="background:#fafbfc;">
+      <td style="font-size:11px;">04-26</td><td>Standalone</td><td>AFL · Collingwood H2H</td><td style="text-align:right;">$1.62</td><td style="text-align:right;">$20.00</td><td style="text-align:center;"><span style="background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-weight:700;font-size:11px;">✓ WON</span></td><td style="text-align:right;" class="chg-pos">+$12.40</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr style="background:#f4f5f7;font-weight:700;">
+      <td colspan="2">TOTALS (last 10)</td>
+      <td>6W / 4L / 0V</td>
+      <td colspan="2" style="text-align:right;">$149.75</td>
+      <td colspan="2" style="text-align:right;" class="chg-pos">+$61.09</td>
+    </tr>
+  </tfoot>
+</table>
+
+<h2>🎯 TL;DR, This Run</h2>
 
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px;">
   <div style="flex:1 1 120px;background:#f1f8f2;border-left:4px solid #2e7d32;padding:10px 14px;border-radius:0 6px 6px 0;">
     <p style="margin:0;font-size:11.5px;text-transform:uppercase;letter-spacing:0.8px;color:#5d6775;">Standalone</p>
-    <p style="margin:0;font-size:20px;font-weight:700;color:#0f1923;">2 picks</p>
+    <p style="margin:0;font-size:20px;font-weight:700;color:#0f1923;">1 pick</p>
   </div>
   <div style="flex:1 1 120px;background:#fff6e8;border-left:4px solid #ef6c00;padding:10px 14px;border-radius:0 6px 6px 0;">
     <p style="margin:0;font-size:11.5px;text-transform:uppercase;letter-spacing:0.8px;color:#5d6775;">Multis</p>
@@ -86,324 +105,196 @@
   </div>
   <div style="flex:1 1 120px;background:#f4f5f7;border-left:4px solid #5d6775;padding:10px 14px;border-radius:0 6px 6px 0;">
     <p style="margin:0;font-size:11.5px;text-transform:uppercase;letter-spacing:0.8px;color:#5d6775;">$ per unit</p>
-    <p style="margin:0;font-size:20px;font-weight:700;color:#0f1923;">$10.00</p>
+    <p style="margin:0;font-size:20px;font-weight:700;color:#0f1923;">$16.67</p>
   </div>
+</div>
+
+<div class="urgent-banner">
+  <p style="margin:0;font-size:13px;font-weight:700;">🔥 URGENT, Multi leg (Rabbitohs) kicks off 2:00 PM AEST TODAY. Place ENTIRE multi before 2:00 PM AEST or Rabbitohs leg is unavailable.</p>
 </div>
 
 <h2>💰 Allocation Table</h2>
 
-<table style="table-layout:fixed;width:100%;font-size:12.5px;border-collapse:collapse;">
+<table>
   <thead>
-    <tr style="background:#f0f2f5;">
-      <th style="width:11%;padding:7px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">ID</th>
-      <th style="width:32%;padding:7px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">Pick</th>
-      <th style="width:12%;padding:7px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">Odds</th>
-      <th style="width:11%;padding:7px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">Conv</th>
-      <th style="width:17%;padding:7px 5px;text-align:right;border-bottom:2px solid #d0d5dd;">Stake</th>
-      <th style="width:17%;padding:7px 5px;text-align:right;border-bottom:2px solid #d0d5dd;">Win $</th>
+    <tr>
+      <th style="width:13%;">ID</th>
+      <th style="width:36%;">Pick</th>
+      <th style="text-align:right;width:10%;">Odds</th>
+      <th style="text-align:right;width:12%;">Conv</th>
+      <th style="text-align:right;width:13%;">Stake</th>
+      <th style="text-align:right;width:13%;">Win $</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:7px 5px;border-bottom:1px solid #eee;">EB-027</td>
-      <td style="padding:7px 5px;border-bottom:1px solid #eee;">NRL · Storm H2H</td>
-      <td style="padding:7px 5px;text-align:center;border-bottom:1px solid #eee;">$1.58</td>
-      <td style="padding:7px 5px;text-align:center;border-bottom:1px solid #eee;">68% T3</td>
-      <td style="padding:7px 5px;text-align:right;border-bottom:1px solid #eee;">$20.00</td>
-      <td style="padding:7px 5px;text-align:right;border-bottom:1px solid #eee;"><span style="color:#2e7d32;">+$11.60</span></td>
+      <td style="font-weight:600;">EB-035</td>
+      <td>NHL · Colorado Avalanche H2H</td>
+      <td style="text-align:right;">$1.54</td>
+      <td style="text-align:right;">65% T3</td>
+      <td style="text-align:right;">$33.33</td>
+      <td style="text-align:right;" class="chg-pos">+$18.00</td>
     </tr>
-    <tr>
-      <td style="padding:7px 5px;border-bottom:1px solid #eee;">EB-028</td>
-      <td style="padding:7px 5px;border-bottom:1px solid #eee;">AFL · Collingwood H2H</td>
-      <td style="padding:7px 5px;text-align:center;border-bottom:1px solid #eee;">$1.62</td>
-      <td style="padding:7px 5px;text-align:center;border-bottom:1px solid #eee;">68% T3</td>
-      <td style="padding:7px 5px;text-align:right;border-bottom:1px solid #eee;">$20.00</td>
-      <td style="padding:7px 5px;text-align:right;border-bottom:1px solid #eee;"><span style="color:#2e7d32;">+$12.40</span></td>
-    </tr>
-    <tr>
-      <td style="padding:7px 5px;border-bottom:1px solid #eee;">MULTI-1</td>
-      <td style="padding:7px 5px;border-bottom:1px solid #eee;">Hawthorn + Brisbane + Tigers</td>
-      <td style="padding:7px 5px;text-align:center;border-bottom:1px solid #eee;">~$2.95</td>
-      <td style="padding:7px 5px;text-align:center;border-bottom:1px solid #eee;">~27%</td>
-      <td style="padding:7px 5px;text-align:right;border-bottom:1px solid #eee;">$10.00</td>
-      <td style="padding:7px 5px;text-align:right;border-bottom:1px solid #eee;"><span style="color:#2e7d32;">+$19.50</span></td>
-    </tr>
-    <tr style="background:#f0f2f5;font-weight:700;">
-      <td style="padding:7px 5px;" colspan="4"><strong>TOTAL</strong></td>
-      <td style="padding:7px 5px;text-align:right;"><strong>$50.00</strong></td>
-      <td style="padding:7px 5px;text-align:right;"><span style="color:#2e7d32;"><strong>+$43.50</strong></span></td>
+    <tr style="background:#fafbfc;">
+      <td style="font-weight:600;">MULTI-035</td>
+      <td>AFL+NRL+NBA 3-legger</td>
+      <td style="text-align:right;">$2.74</td>
+      <td style="text-align:right;">~32%</td>
+      <td style="text-align:right;">$16.67</td>
+      <td style="text-align:right;" class="chg-pos">+$29.01</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr style="background:#f4f5f7;font-weight:700;">
+      <td colspan="2">TOTAL</td>
+      <td colspan="3" style="text-align:right;">$50.00</td>
+      <td style="text-align:right;" class="chg-pos">+$47.01</td>
+    </tr>
+  </tfoot>
 </table>
 
-<h2>⚡ Pick Cards — Standalone</h2>
+<h2>⚡ Pick Cards, Standalone</h2>
 
 <div style="border:1px solid #d8dde3;border-radius:8px;padding:14px 16px;margin:10px 0;background:#fafbfc;">
-  <h3 style="margin:0 0 8px;font-size:15px;">🟢 EB-027 · NRL — Melbourne Storm H2H</h3>
-  <p style="margin:2px 0;font-size:13px;"><strong>Event:</strong> Storm vs South Sydney Rabbitohs · Sat 25 Apr · AAMI Park, Melbourne</p>
-  <table style="font-size:12px;margin:8px 0;border:none;width:100%;">
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;width:38%;border:none;">Odds (indicative)</td><td style="border:none;padding:3px 0;"><strong>$1.58 AU</strong></td></tr>
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Model prob</td><td style="border:none;padding:3px 0;"><strong>68%</strong> (Tier 3)</td></tr>
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Stake</td><td style="border:none;padding:3px 0;"><strong>$20.00</strong> (2 units)</td></tr>
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Gates</td><td style="border:none;padding:3px 0;"><span style="color:#2e7d32;">🟢 G1 Teams ✓</span> · <span style="color:#2e7d32;">🟢 G2 68% ✓</span> · <span style="color:#2e7d32;">🟢 G3 $1.58 ✓</span></td></tr>
+  <h3 style="margin:0 0 8px;font-size:15px;">🟢 EB-035 · NHL, Colorado Avalanche H2H</h3>
+  <p style="margin:2px 0;font-size:13px;"><strong>Event:</strong> Minnesota Wild @ Colorado Avalanche · R2 G1 · Sun 3 May 9:00 PM ET (Mon 4 May 11:00 AM AEST) · Ball Arena, Denver</p>
+  <table style="margin:8px 0;">
+    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;width:36%;border:none;">Odds (indicative)</td><td style="border:none;padding:3px 0;"><strong>$1.54 AU</strong> (US -185)</td></tr>
+    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Model prob</td><td style="border:none;padding:3px 0;"><strong>65%</strong> (Tier 3) · market implied 64.9% → marginal edge</td></tr>
+    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Stake</td><td style="border:none;padding:3px 0;"><strong>$33.33</strong> (2 units)</td></tr>
+    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Gates</td><td style="border:none;padding:3px 0;"><span style="color:#e65100;">⚠️ G1, rosters confirmed; verify scratches/starting goalie before placing</span> · <span style="color:#2e7d32;">🟢 G2 65% ✓</span> · <span style="color:#2e7d32;">🟢 G3 $1.54 ✓</span></td></tr>
   </table>
-  <p style="margin:4px 0;font-size:12.5px;"><strong>Why:</strong> Storm at home for Anzac Day vs a Rabbitohs side they've dominated historically; 68% model win prob and $1.58 offers genuine value edge.</p>
-  <p style="margin:4px 0;font-size:11.5px;color:#8a939e;"><em>Note: Storm on 5-game losing skid — bet the bounce, not the streak. Verify odds on Sportsbet/TAB before placing.</em></p>
-</div>
-
-<div style="border:1px solid #d8dde3;border-radius:8px;padding:14px 16px;margin:10px 0;background:#fafbfc;">
-  <h3 style="margin:0 0 8px;font-size:15px;">🟢 EB-028 · AFL — Collingwood H2H vs Essendon</h3>
-  <p style="margin:2px 0;font-size:13px;"><strong>Event:</strong> Essendon vs Collingwood · Sat 25 Apr (Anzac Day) · MCG</p>
-  <table style="font-size:12px;margin:8px 0;border:none;width:100%;">
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;width:38%;border:none;">Odds (indicative)</td><td style="border:none;padding:3px 0;"><strong>$1.62 AU</strong></td></tr>
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Model prob</td><td style="border:none;padding:3px 0;"><strong>68%</strong> (Tier 3)</td></tr>
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Stake</td><td style="border:none;padding:3px 0;"><strong>$20.00</strong> (2 units)</td></tr>
-    <tr><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Gates</td><td style="border:none;padding:3px 0;"><span style="color:#2e7d32;">🟢 G1 Teams ✓</span> · <span style="color:#2e7d32;">🟢 G2 68% ✓</span> · <span style="color:#2e7d32;">🟢 G3 $1.62 ✓</span></td></tr>
-  </table>
-  <p style="margin:4px 0;font-size:12.5px;"><strong>Why:</strong> Collingwood welcome back De Goey + Sidebottom; Essendon have won only 4 of the last 19 Anzac Day games (21% H2H).</p>
-  <p style="margin:4px 0;font-size:11.5px;color:#8a939e;"><em>Watch: Darcy Moore (hamstring) listed as optimistic — confirm full team list Friday. Verify odds on Sportsbet/TAB before placing.</em></p>
+  <p style="margin:4px 0;font-size:12.5px;"><strong>Why:</strong> Colorado at home in R2 G1 with MacKinnon + Makar; home teams win Game 1 of playoff series at ~67%, market at 64.9% is a slight mis-price.</p>
+  <p style="margin:4px 0;font-size:11.5px;color:#8a939e;"><em>⚠️ Verify starting goalie confirmed at morning skate before placing. Odds indicative, check Sportsbet/TAB.</em></p>
 </div>
 
 <h2>🎰 Multi Cards</h2>
 
 <div style="border:1px solid #c9d3dd;border-radius:8px;padding:14px 16px;margin:10px 0;background:#f5f9fc;">
-  <h3 style="margin:0 0 8px;font-size:15px;">🎰 Multi #1 — Anzac Weekend Home Teams</h3>
-  <table style="font-size:12px;margin:6px 0;border:none;width:100%;">
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;width:28%;border:none;">Leg 1</td><td style="border:none;padding:3px 0;">AFL · Hawthorn H2H vs Gold Coast · ~$1.40 · 65%</td></tr>
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Leg 2</td><td style="border:none;padding:3px 0;">AFL · Brisbane H2H vs Adelaide · ~$1.36 · 65%</td></tr>
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Leg 3</td><td style="border:none;padding:3px 0;">NRL · Wests Tigers H2H vs Raiders · ~$1.55 · 63%</td></tr>
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Combined prob</td><td style="border:none;padding:3px 0;"><strong>~27%</strong> (legs independent)</td></tr>
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Combined odds</td><td style="border:none;padding:3px 0;"><strong>~$2.95</strong> ($1.40 × $1.36 × $1.55)</td></tr>
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Stake</td><td style="border:none;padding:3px 0;"><strong>$10.00</strong> (1 unit)</td></tr>
-    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Gate check</td><td style="border:none;padding:3px 0;"><span style="color:#2e7d32;">G1 ✓</span> · <span style="color:#2e7d32;">G2 all ≥60% ✓</span> · <span style="color:#2e7d32;">G3 legs ≥$1.30 ✓ · combined $2.95 ✓</span></td></tr>
+  <h3 style="margin:0 0 4px;font-size:15px;">🎰 EB-MULTI-035, AFL/NRL/NBA Sunday Sweep</h3>
+  <div class="urgent-banner" style="margin:6px 0 10px;">
+    <p style="margin:0;font-size:12.5px;font-weight:700;">🔥 URGENT: Place before 2:00 PM AEST today (Rabbitohs KO). If missed, multi void this run.</p>
+  </div>
+  <table style="margin:6px 0;">
+    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;width:26%;border:none;">Leg 1, AFL</td><td style="border:none;padding:3px 0;">Gold Coast Suns H2H vs GWS · 7:20 PM AEST today · <strong>$1.40</strong> · 65% · G1 🟢 G2 🟢 G3 🟢</td></tr>
+    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Leg 2, NRL 🔥</td><td style="border:none;padding:3px 0;">S. Sydney Rabbitohs H2H @ Newcastle · 2:00 PM AEST today · <strong>$1.45</strong> · 67% · G1 🟢 G2 🟢 G3 🟢</td></tr>
+    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Leg 3, NBA</td><td style="border:none;padding:3px 0;">Cleveland Cavaliers H2H vs Toronto G7 · 9:30 AM AEST Mon · <strong>$1.35</strong> · 74% · G1 ⚠️ G2 🟢 G3 🟢</td></tr>
+    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Combined prob</td><td style="border:none;padding:3px 0;"><strong>~32%</strong> (legs independent)</td></tr>
+    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Combined odds</td><td style="border:none;padding:3px 0;"><strong>~$2.74</strong> ($1.40 × $1.45 × $1.35)</td></tr>
+    <tr style="border:none;"><td style="padding:3px 10px 3px 0;color:#5d6775;border:none;">Stake</td><td style="border:none;padding:3px 0;"><strong>$16.67</strong> (1 unit)</td></tr>
   </table>
-  <p style="margin:4px 0;font-size:12px;"><strong>Logic:</strong> Three favourites at home over Anzac weekend — Hawks 6-win streak at UTAS, Lions at Gabba, Tigers at Leichhardt.</p>
-  <p style="margin:4px 0;font-size:11.5px;color:#8a939e;"><em>Legs appear in no other suggested multi. Verify combined odds on Sportsbet/TAB — correlated AFL legs may reduce payout.</em></p>
+  <p style="margin:6px 0 2px;font-size:12px;"><strong>Leg rationale:</strong></p>
+  <p style="margin:2px 0;font-size:12px;">· <strong>Gold Coast Suns</strong>, home ground advantage (People First Stadium), statistical model 65-70%; conceding 100+ in 4 straight is a concern but at-home odds of $1.40 make this a viable multi builder.</p>
+  <p style="margin:2px 0;font-size:12px;">· <strong>Rabbitohs</strong>, 67% road win; won 4 of 5 incl 48-6 demolition of Storm; Knights inconsistent at home.</p>
+  <p style="margin:2px 0;font-size:12px;">· <strong>Cavaliers</strong>, 74% Game 7 home win probability; NBA G7 home teams win ~77% historically; Raptors forced G7 on a buzzer shot but Cleveland is clearly the better team.</p>
+  <p style="margin:6px 0 0;font-size:11.5px;color:#8a939e;"><em>Legs appear in no other suggested multi. G1 ⚠️ on Cavs, verify NBA injury report before placing. Confirm combined odds on Sportsbet/TAB.</em></p>
 </div>
 
-<h2>🏆 AFL Tipping — Round 7 (Anzac Appeal Round)</h2>
-
-<table style="table-layout:fixed;width:100%;font-size:12.5px;border-collapse:collapse;">
-  <thead>
-    <tr style="background:#f0f2f5;">
-      <th style="padding:7px 6px;text-align:left;border-bottom:2px solid #d0d5dd;width:34%;">Game</th>
-      <th style="padding:7px 6px;text-align:left;border-bottom:2px solid #d0d5dd;width:22%;">When</th>
-      <th style="padding:7px 6px;text-align:left;border-bottom:2px solid #d0d5dd;width:22%;">Tip</th>
-      <th style="padding:7px 6px;text-align:left;border-bottom:2px solid #d0d5dd;width:22%;">Conf</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Bulldogs vs Sydney</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Thu 23 Apr ~7:25pm</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Sydney</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">High · ladder leaders 5-1</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px;border-bottom:1px solid #eee;">Richmond vs Melbourne</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Fri 24 Apr, MCG</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Melbourne</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Very high · 85% model prob</td>
-    </tr>
-    <tr>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Hawthorn vs Gold Coast</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Sat 25 Apr, UTAS</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Hawthorn</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">High · 6-game win streak</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px;border-bottom:1px solid #eee;">Essendon vs Collingwood</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Sat 25 Apr, MCG</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Collingwood</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">High · 15 of 19 Anzac Days</td>
-    </tr>
-    <tr>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Port Adelaide vs Geelong</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Sat 25 Apr, Adelaide Oval</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Geelong</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Med · strong road form</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px;border-bottom:1px solid #eee;">Fremantle vs Carlton</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Sat 25 Apr, Optus Stad.</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Fremantle</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Med · Optus fortress home</td>
-    </tr>
-    <tr>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Brisbane vs Adelaide</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Sun 26 Apr, Gabba</td>
-      <td style="padding:6px;border-bottom:1px solid #eee;"><strong>Brisbane</strong></td>
-      <td style="padding:6px;border-bottom:1px solid #eee;">Med · $1.36 home fav</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px;border-bottom:1px solid #eee;" colspan="4"><em style="color:#8a939e;font-size:11.5px;">2 Sunday games (GWS / North Melbourne / St Kilda / West Coast) — insufficient data this scan. Tip by form guide.</em></td>
-    </tr>
-  </tbody>
-</table>
+<h2>🏆 AFL Tipping (Thursday runs only)</h2>
+<p><em>AFL tipping runs Thursdays only. Next Thursday scan → Round 9 tips.</em></p>
 
 <h2>🔍 Markets Reviewed + Not Picked</h2>
 
 <div style="background:#f4f5f7;border-left:4px solid #5d6775;padding:10px 14px;border-radius:0 6px 6px 0;margin:0 0 12px;font-size:12.5px;">
-  <p style="margin:0 0 2px;"><strong>G1 — Variables confirmed:</strong> team lists / lineups / field locked in.</p>
-  <p style="margin:0 0 2px;"><strong>G2 — Model probability:</strong> standalone ≥65% · multi leg ≥60% · golf Top-10 ≥20% · golf outright ≥10%.</p>
-  <p style="margin:0;"><strong>G3 — Odds floor:</strong> standalone ≥$1.50 · multi leg ≥$1.30 · multi combined ≥$2.50.</p>
+  <p style="margin:0 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:0.8px;color:#5d6775;"><strong>Gate legend</strong></p>
+  <p style="margin:0 0 2px;"><strong>G1:</strong> team lists / lineups / field confirmed. <strong>G2:</strong> standalone ≥65% · multi leg ≥60%. <strong>G3:</strong> standalone ≥$1.50 · multi leg ≥$1.30 · multi combined ≥$2.50.</p>
 </div>
 
-<table style="table-layout:fixed;width:100%;font-size:12.5px;border-collapse:collapse;">
+<table>
   <thead>
-    <tr style="background:#f0f2f5;">
-      <th style="width:18%;padding:7px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">Sport</th>
-      <th style="width:16%;padding:7px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">Status</th>
-      <th style="width:12%;padding:7px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">Games</th>
-      <th style="width:54%;padding:7px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">Result</th>
+    <tr>
+      <th style="width:16%;">Sport</th>
+      <th style="text-align:center;width:16%;">Status</th>
+      <th style="text-align:center;width:11%;">Games</th>
+      <th style="width:57%;">Result</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">AFL</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">🟢 ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">9</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">2 picks (EB-028 Collingwood + MULTI-1 legs). Sydney H2H $1.23 — G3 fail ($1.23 &lt; $1.50). Melbourne H2H ~$1.12 — G3 fail. Brisbane H2H $1.36 — G3 fail standalone, multi leg ✓.</td>
+      <td style="font-weight:600;">AFL R8</td>
+      <td style="text-align:center;">🟢 ACTIVE</td>
+      <td style="text-align:center;">2</td>
+      <td>Sydney: G3 fail, $1.17 (&lt;$1.30 multi floor). Gold Coast: 1 multi leg included (MULTI-035 Leg 1).</td>
     </tr>
     <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">NRL</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">🟢 ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">8</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">1 pick (EB-027 Storm). Panthers H2H $1.25 — G3 fail standalone ($1.25 &lt; $1.50), also &lt;$1.30 multi leg threshold.</td>
+      <td style="font-weight:600;">NRL R9</td>
+      <td style="text-align:center;">🟢 ACTIVE</td>
+      <td style="text-align:center;">3</td>
+      <td>Rabbitohs: multi leg included. Panthers: G3 fail, $1.23 (&lt;$1.30 multi floor). Sharks/Tigers: G2 fail, insufficient model data.</td>
     </tr>
     <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">Golf</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">🟢 ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">1</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">Zurich Classic is a <strong>team pairs event</strong> — no individual Top-10 market available. Team outright: Fitzpatrick brothers +1000 (~9.1% implied). G2 borderline fail (outright floor ≥10% model prob); given Golf 0-3 record this portfolio, no pick generated.</td>
+      <td style="font-weight:600;">NBA Playoffs</td>
+      <td style="text-align:center;">🟢 ACTIVE</td>
+      <td style="text-align:center;">2 G7s</td>
+      <td>Cavaliers: multi leg. Pistons ($1.34, 74%): qualified multi leg but Cavaliers chosen as the NBA slot (one NBA leg per multi applied).</td>
     </tr>
     <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">NBA</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">⚠️ ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">4</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">R1 playoffs underway. Cavs 2-0 Raptors, Thunder 2-0 Suns, Lakers 2-0 Rockets — all heavy H2H favourites. G3 fail: dominant teams priced $1.10–$1.25. No qualifying standalone market found.</td>
+      <td style="font-weight:600;">NHL Playoffs</td>
+      <td style="text-align:center;">🟢 ACTIVE</td>
+      <td style="text-align:center;">2</td>
+      <td>Colorado: standalone EB-035. Lightning G7: already open as EB-034, not duplicated.</td>
     </tr>
     <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">NHL</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">⚠️ ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">4</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">R1 playoffs underway. Avalanche 2-0 Kings, Flyers 2-0 Penguins — no AU-market odds confirmed; G3 unverifiable this run. Marked pending next scan.</td>
+      <td style="font-weight:600;">EPL</td>
+      <td style="text-align:center;">⚠️ G1 PENDING</td>
+      <td style="text-align:center;">3</td>
+      <td>G1 fail, team sheets released 1hr before KO (~10pm AEST; all 3 games unconfirmed at scan time).</td>
     </tr>
     <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">MLB</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">🟢 ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">15+</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">G1 fail — daily lineups not confirmed 24h out; volume too high for targeted analysis this run.</td>
+      <td style="font-weight:600;">Golf</td>
+      <td style="text-align:center;">⚠️ IN PROGRESS</td>
+      <td style="text-align:center;">1</td>
+      <td>Cadillac R4 starts ~10pm AEST tonight. Young leads at -15 by 6 shots. EB-030/031 (Morikawa/Fleetwood T10) pending. No new picks while event live.</td>
     </tr>
     <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">EPL</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">⚠️ ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">—</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">GW33 fixture not confirmed in scan data. G1 fail — lineups not verified this run.</td>
+      <td style="font-weight:600;">Tennis</td>
+      <td style="text-align:center;">🔴 CONCLUDED</td>
+      <td style="text-align:center;">0</td>
+      <td>Madrid Open finals today. WTA: Kostyuk def Andreeva 6-3 7-5. ATP: Sinner def Zverev 6-2 6-4. Both done, no betting opportunity.</td>
     </tr>
     <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">Tennis</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">⚠️ ACTIVE</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">—</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">ATP/WTA Madrid clay season; draw data not retrieved this run. G1 pending — rescan next Thursday.</td>
+      <td style="font-weight:600;">A-League</td>
+      <td style="text-align:center;">🔴 NO EVENT</td>
+      <td style="text-align:center;">0</td>
+      <td>No games May 3. Elimination Finals were May 2; next matches ~May 9.</td>
     </tr>
     <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">A-League</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">⚪ CHECK</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">—</td>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">Finals series status unclear from scan data. No fixture confirmed — G1 fail.</td>
+      <td style="font-weight:600;">MLB</td>
+      <td style="text-align:center;">🟢 ACTIVE</td>
+      <td style="text-align:center;">15</td>
+      <td>G2 fail, no team exceeds 65% model probability in AU-accessible markets today.</td>
     </tr>
   </tbody>
 </table>
 
 <h2>📈 Performance Analytics</h2>
 
-<h3 style="margin:18px 0 6px;font-size:13.5px;">By Conviction Bucket</h3>
-<table style="font-size:12.5px;table-layout:fixed;width:100%;border-collapse:collapse;">
-  <thead>
-    <tr style="background:#f0f2f5;">
-      <th style="padding:6px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">Bucket</th>
-      <th style="padding:6px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">N</th>
-      <th style="padding:6px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">Win%</th>
-      <th style="padding:6px 5px;text-align:right;border-bottom:2px solid #d0d5dd;">P&L</th>
-      <th style="padding:6px 5px;text-align:right;border-bottom:2px solid #d0d5dd;">ROI</th>
-    </tr>
-  </thead>
+<h3 style="margin:18px 0 6px;">By Conviction Bucket</h3>
+<table>
+  <thead><tr><th>Bucket</th><th style="text-align:center;">N</th><th style="text-align:center;">Win%</th><th style="text-align:right;">P&L</th><th style="text-align:right;">ROI</th></tr></thead>
   <tbody>
-    <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">65–69%</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">6</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">50%</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−$0.79</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−9.8%</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">70–74%</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">6</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">50%</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−$0.30</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−3.4%</td>
-    </tr>
-    <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">75–79%</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">4</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">50%</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−$1.04</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−18.7%</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">80+%</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">3</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;"><strong>100%</strong></td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#2e7d32;">+$1.94</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#2e7d32;">+43.2%</td>
-    </tr>
+    <tr><td style="font-weight:600;">65–69%</td><td style="text-align:center;">12</td><td style="text-align:center;">58.3%</td><td style="text-align:right;" class="chg-pos">+$23.16</td><td style="text-align:right;" class="chg-pos">+22.2%</td></tr>
+    <tr style="background:#fafbfc;"><td style="font-weight:600;">70–74%</td><td style="text-align:center;">6</td><td style="text-align:center;">50.0%</td><td style="text-align:right;" class="chg-neg">−$0.30</td><td style="text-align:right;" class="chg-neg">−3.4%</td></tr>
+    <tr><td style="font-weight:600;">75–79%</td><td style="text-align:center;">4</td><td style="text-align:center;">50.0%</td><td style="text-align:right;" class="chg-neg">−$1.04</td><td style="text-align:right;" class="chg-neg">−18.7%</td></tr>
+    <tr style="background:#fafbfc;"><td style="font-weight:600;">80%+</td><td style="text-align:center;">3</td><td style="text-align:center;">100%</td><td style="text-align:right;" class="chg-pos">+$1.94</td><td style="text-align:right;" class="chg-pos">+43.2%</td></tr>
   </tbody>
 </table>
 
-<h3 style="margin:18px 0 6px;font-size:13.5px;">By Sport</h3>
-<table style="font-size:12.5px;table-layout:fixed;width:100%;border-collapse:collapse;">
-  <thead>
-    <tr style="background:#f0f2f5;">
-      <th style="padding:6px 5px;text-align:left;border-bottom:2px solid #d0d5dd;">Sport</th>
-      <th style="padding:6px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">N</th>
-      <th style="padding:6px 5px;text-align:center;border-bottom:2px solid #d0d5dd;">Win%</th>
-      <th style="padding:6px 5px;text-align:right;border-bottom:2px solid #d0d5dd;">P&L</th>
-      <th style="padding:6px 5px;text-align:right;border-bottom:2px solid #d0d5dd;">ROI</th>
-    </tr>
-  </thead>
+<h3 style="margin:18px 0 6px;">By Sport</h3>
+<table>
+  <thead><tr><th>Sport</th><th style="text-align:center;">N</th><th style="text-align:center;">Win%</th><th style="text-align:right;">P&L</th><th style="text-align:right;">ROI</th></tr></thead>
   <tbody>
-    <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">AFL</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">15</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;"><strong>70%</strong></td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#2e7d32;">+$2.59</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#2e7d32;">+12.1%</td>
-    </tr>
-    <tr style="background:#fafbfc;">
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">NRL</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">3</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">33%</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−$1.28</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−31.5%</td>
-    </tr>
-    <tr>
-      <td style="padding:6px 5px;border-bottom:1px solid #eee;">Golf</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">3</td>
-      <td style="padding:6px 5px;text-align:center;border-bottom:1px solid #eee;">0%</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−$3.60</td>
-      <td style="padding:6px 5px;text-align:right;border-bottom:1px solid #eee;color:#c0392b;">−100%</td>
-    </tr>
+    <tr><td style="font-weight:600;">AFL (all)</td><td style="text-align:center;">18</td><td style="text-align:center;">76.9%</td><td style="text-align:right;" class="chg-pos">+$36.48</td><td style="text-align:right;" class="chg-pos">+47.8%</td></tr>
+    <tr style="background:#fafbfc;"><td style="font-weight:600;">NRL (all)</td><td style="text-align:center;">6</td><td style="text-align:center;">33.3%</td><td style="text-align:right;" class="chg-neg">−$11.22</td><td style="text-align:right;" class="chg-neg">−24.6%</td></tr>
+    <tr><td style="font-weight:600;">Golf</td><td style="text-align:center;">3</td><td style="text-align:center;">0%</td><td style="text-align:right;" class="chg-neg">−$3.60</td><td style="text-align:right;" class="chg-neg">−100%</td></tr>
   </tbody>
 </table>
 
-<p style="margin:10px 0;font-size:13px;"><strong>Stu's read:</strong> 80+ bucket undefeated (+43.2% ROI) and AFL is the engine (+12.1%) — but Golf (-100%) has killed the bank; zero golf picks until minimum 3-event resting period.</p>
+<p style="margin:10px 0;font-size:13px;"><strong>Stu's read:</strong> 65–69% bucket is the real edge (22% ROI, n=12); AFL is king (+47.8%); NRL and Golf are bleeders, demand stronger gate compliance on both going forward.</p>
 
-<h2>🔗 Drive Tracker</h2>
+<div style="border-top:1px solid #eef0f3;margin-top:16px;padding-top:10px;">
+  <p style="font-size:11.5px;color:#8a939e;"><strong>Open picks pending:</strong> EB-030 Morikawa T10 (Cadillac R4 ~10pm AEST tonight) · EB-031 Fleetwood T10 (same) · EB-034 Lightning H2H G7 (8am AEST Mon) · None settled this scan.</p>
+</div>
 
-<p style="font-size:13px;"><a href="https://drive.google.com/open?id=1D7MYfbtw3YjstjQS_Ifb2WW3fUlfsIJcnZUpSrZ2g1A"><strong>📊 Edge Bet Paper Tracker — Google Drive</strong></a></p>
-<p style="font-size:11.5px;color:#8a939e;"><em>Picks auto-logged · verify odds on Sportsbet/TAB · message Spencer outcomes for next scan analytics.</em></p>
-
-</main>
-<p class="footer">Spencer · Melbourne · <a href="mailto:welcome@myspencer.ai">welcome@myspencer.ai</a> · <a href="https://myspencer.ai">myspencer.ai</a></p>
-</body></html>
+</body>
+</html>
