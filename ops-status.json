@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-05T07:10:01.562821+10:00",
-  "generated_display": "7:10am AEST \u00b7 5 May 2026",
+  "generated_at": "2026-05-05T09:15:03.704223+10:00",
+  "generated_display": "9:15am AEST \u00b7 5 May 2026",
   "weekday": "Tuesday",
   "jobs_today": [
     {
@@ -36,25 +36,25 @@
     {
       "time": "7:25am",
       "label": "\ud83e\ude7a Quality check, all outputs",
-      "status": "pending",
+      "status": "ran",
       "detail": ""
     },
     {
       "time": "7:30am",
       "label": "\ud83e\udde0 Self-learning loop",
-      "status": "pending",
+      "status": "ran",
       "detail": ""
     },
     {
       "time": "8am",
       "label": "\ud83d\udcca Diagnostic heartbeat",
-      "status": "pending",
+      "status": "ran",
       "detail": "all green"
     },
     {
       "time": "8:45am",
       "label": "Market research deep-dive",
-      "status": "pending",
+      "status": "ran",
       "detail": "Tue/Thu/Sat \u00b7 13 sections"
     },
     {
