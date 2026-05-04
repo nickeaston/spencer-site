@@ -1,94 +1,86 @@
 {
-  "generated_at": "2026-05-04T21:19:51+10:00",
-  "generated_display": "9:19PM AEST · 4 May 2026",
-  "weekday": "Monday",
+  "generated_at": "2026-05-05T07:10:01.562821+10:00",
+  "generated_display": "7:10am AEST \u00b7 5 May 2026",
+  "weekday": "Tuesday",
   "jobs_today": [
     {
-      "time": "04:30",
+      "time": "4:30am",
       "label": "YouTube + podcast digest",
       "status": "ran",
-      "detail": "12 sources scanned · 4 takeaways"
+      "detail": ""
     },
     {
-      "time": "05:30",
+      "time": "5:30am",
       "label": "Newsletter digest summarised",
       "status": "ran",
-      "detail": "33 emails → 5 signals"
+      "detail": "22 newsletters synthesised"
     },
     {
-      "time": "06:00",
+      "time": "6am",
       "label": "Intelligence digest combined",
       "status": "ran",
-      "detail": "YouTube + newsletters → 1 view"
+      "detail": ""
     },
     {
-      "time": "06:45",
+      "time": "6:45am",
       "label": "Overnight news scan",
       "status": "ran",
-      "detail": "live web · cited sources"
+      "detail": ""
     },
     {
-      "time": "07:00",
+      "time": "7am",
       "label": "Morning brief delivered",
       "status": "ran",
-      "detail": "12 sections · 17 data feeds"
+      "detail": "10 sections \u00b7 17 live feeds"
     },
     {
-      "time": "07:25",
-      "label": "🩺 Quality check, all outputs",
-      "status": "ran",
-      "detail": "size · sections · sources verified"
+      "time": "7:25am",
+      "label": "\ud83e\ude7a Quality check, all outputs",
+      "status": "pending",
+      "detail": ""
     },
     {
-      "time": "07:30",
-      "label": "🧠 Self-learning loop",
-      "status": "ran",
-      "detail": "yesterday's misses → today's prompts"
+      "time": "7:30am",
+      "label": "\ud83e\udde0 Self-learning loop",
+      "status": "pending",
+      "detail": ""
     },
     {
-      "time": "08:00",
-      "label": "📊 Diagnostic heartbeat",
-      "status": "ran",
-      "detail": "all green · confidence 9/9"
+      "time": "8am",
+      "label": "\ud83d\udcca Diagnostic heartbeat",
+      "status": "pending",
+      "detail": "all green"
     },
     {
-      "time": "08:45",
+      "time": "8:45am",
       "label": "Market research deep-dive",
       "status": "pending",
-      "detail": "Tue–Sat · 13 sections · 10 experts"
+      "detail": "Tue/Thu/Sat \u00b7 13 sections"
     },
     {
-      "time": "10:00",
+      "time": "10am",
       "label": "Investment scanner",
       "status": "pending",
-      "detail": "76 assets · live P&L · auto-sync"
+      "detail": "86 tickers \u00b7 Drive auto-sync"
     },
     {
-      "time": "11:00",
-      "label": "🔍 Output regression check",
+      "time": "11am",
+      "label": "\ud83d\udd0d Output regression check",
       "status": "pending",
-      "detail": "today vs. gold-standard · floors enforced"
+      "detail": ""
     },
     {
-      "time": "19:00",
-      "label": "Edge Bet scanner",
+      "time": "9pm",
+      "label": "\u2764\ufe0f Personal health check-in",
       "status": "pending",
-      "detail": "Thu/Fri/Sun · 9 sports · 5,000+ markets"
-    },
-    {
-      "time": "21:00",
-      "label": "❤️ Personal health check-in",
-      "status": "pending",
-      "detail": "9pm daily · vitals + habit log"
+      "detail": ""
     }
   ],
   "footer": {
-    "active_crons": 13,
+    "active_crons": 7,
     "drive_files_synced": 120,
-    "edge_bet_record": "13W 12L · +200% ROI",
-    "dashboard_last_refresh": "2026-04-15",
-    "heartbeat_last": "green",
-    "self_learning": "active",
-    "regression_checked": "daily"
+    "edge_bet_record": "8W 8L",
+    "dashboard_last_refresh": "2026-04-20",
+    "heartbeat_last": "green"
   }
 }
