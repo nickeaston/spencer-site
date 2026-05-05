@@ -347,6 +347,37 @@
   .callout-source { text-align: center; font-size: 13px; font-weight: 600;
                      letter-spacing: 0.08em; text-transform: uppercase;
                      color: var(--gold); margin-top: 24px; }
+
+  /* Mobile responsive overrides — stack 2-col feature panels, shrink padding, wrap tables */
+  .feature-grid-2col { display: grid; gap: 28px; align-items: center; }
+  .economic-grid-2col { display: grid; gap: 28px; align-items: stretch; }
+  @media (max-width: 760px) {
+    .container { padding: 0 18px; }
+    .section { padding: 60px 0; }
+    .hero { padding: 48px 0 32px; }
+    .feature-grid-2col, .economic-grid-2col { grid-template-columns: 1fr !important; gap: 20px; }
+    .feature-grid-2col > div, .economic-grid-2col > div { width: 100%; }
+    /* Tracks, demos, snapshot grid all already adapt via grid-auto-flow + minmax */
+    .demo-hero-title { font-size: 22px !important; }
+    h1 { font-size: 28px !important; line-height: 1.18; }
+    h2.section-title, .section-title { font-size: 26px !important; line-height: 1.2; }
+    .section-intro { font-size: 15.5px !important; }
+    /* Telegram chat mockup max-width already 540 — fine on mobile */
+    /* Snapshot tile internal monospace blocks */
+    .snapshot-mono { font-size: 10.5px !important; word-break: break-word; }
+    /* Generic safety: any overflowing inline table wraps */
+    table { max-width: 100%; }
+    /* Ops panel rows squeeze cleanly */
+    .ops-row .detail { font-size: 10.5px; }
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 24px !important; }
+    .section-title { font-size: 22px !important; }
+    .container { padding: 0 14px; }
+    .ops-row { font-size: 11px; }
+    .ops-row .time { min-width: 42px; }
+    .ops-row .detail { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -1081,7 +1112,7 @@
       A single live page showing the macro pulse, inflation, jobs, yields, liquidity, housing, across the US, Australia, and global markets. Spencer pulls every series from free public APIs, refreshes the dashboard on the 1st + 15th of each month, and threads the highlights into the morning brief when something material moves.
     </p>
 
-    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin:32px 0 14px;align-items:stretch;">
+    <div class="economic-grid-2col" style="grid-template-columns:1.3fr 1fr;margin:32px 0 14px;">
 
       <!-- Live data preview -->
       <div style="background:#fff;border:1px solid #d6e8d8;border-radius:12px;padding:22px 26px;box-shadow:0 4px 12px rgba(0,0,0,0.04);">
@@ -1145,7 +1176,7 @@
 
     <!-- ENCORE FEATURE, full-width panel: encorella.com built end-to-end with Spencer -->
     <div style="background:linear-gradient(135deg, var(--gold-lt) 0%, #fff 60%);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin:32px 0 14px;box-shadow:0 4px 12px rgba(0,0,0,0.06);">
-      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;">
+      <div class="feature-grid-2col" style="grid-template-columns:1.1fr 1fr;">
         <div>
           <div style="font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);font-weight:700;margin-bottom:8px;">Built with Spencer · live at encorella.com</div>
           <h3 style="font-size:26px;margin:0 0 12px;color:var(--ink);font-family:Georgia,serif;font-weight:700;letter-spacing:-0.3px;">Encorella, a real product, end-to-end with Spencer</h3>
