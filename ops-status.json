@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-05T12:00:02.972261+10:00",
-  "generated_display": "12:00pm AEST \u00b7 5 May 2026",
-  "weekday": "Tuesday",
+  "generated_at": "2026-05-06T07:10:00.974500+10:00",
+  "generated_display": "7:10am AEST \u00b7 6 May 2026",
+  "weekday": "Wednesday",
   "jobs_today": [
     {
       "time": "4:30am",
@@ -13,7 +13,7 @@
       "time": "5:30am",
       "label": "Newsletter digest summarised",
       "status": "ran",
-      "detail": "22 newsletters synthesised"
+      "detail": "42 newsletters synthesised"
     },
     {
       "time": "6am",
@@ -36,44 +36,44 @@
     {
       "time": "7:25am",
       "label": "\ud83e\ude7a Quality check, all outputs",
-      "status": "ran",
+      "status": "pending",
       "detail": ""
     },
     {
       "time": "7:30am",
       "label": "\ud83e\udde0 Self-learning loop",
-      "status": "ran",
+      "status": "pending",
       "detail": ""
     },
     {
       "time": "8am",
       "label": "\ud83d\udcca Diagnostic heartbeat",
-      "status": "ran",
+      "status": "pending",
       "detail": "all green"
     },
     {
       "time": "8:45am",
       "label": "Market research deep-dive",
-      "status": "ran",
+      "status": "pending",
       "detail": "Tue/Thu/Sat \u00b7 13 sections"
     },
     {
       "time": "10am",
       "label": "Investment scanner",
-      "status": "ran",
+      "status": "pending",
       "detail": "86 tickers \u00b7 Drive auto-sync"
     },
     {
       "time": "11am",
       "label": "\ud83d\udd0d Output regression check",
-      "status": "ran",
+      "status": "pending",
       "detail": ""
     },
     {
-      "time": "8:45am",
+      "time": "8:15am",
       "label": "Edge Bet scanner",
-      "status": "ran",
-      "detail": "8W 8L \u00b7 bank $136.65"
+      "status": "pending",
+      "detail": "8W 8L \u00b7 bank $169.75"
     },
     {
       "time": "9pm",
