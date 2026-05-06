@@ -573,9 +573,47 @@
       .footer-inner { flex-direction: column; align-items: flex-start; }
       .footer-contact { text-align: left; }
     }
+
+    /* Top nav — added 2026-05-06 so visitors can return to homepage / jump elsewhere */
+    nav.site-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(191,176,154,0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid #D4C8B4;
+      padding: 0 32px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    nav.site-nav .nav-logo { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: #1A1814; text-decoration: none; }
+    nav.site-nav .nav-logo .dot { color: #7A5C2E; }
+    nav.site-nav .nav-links { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+    nav.site-nav .nav-links a { font-size: 13.5px; color: #5C5751; text-decoration: none; font-weight: 500; transition: color 0.15s; }
+    nav.site-nav .nav-links a:hover { color: #1A1814; }
+    nav.site-nav .nav-cta {
+      font-size: 13.5px; font-weight: 600; padding: 8px 16px;
+      background: #1A1814; color: #FDFCF8;
+      border-radius: 6px; text-decoration: none;
+      transition: background 0.15s;
+    }
+    nav.site-nav .nav-cta:hover { background: #7A5C2E; }
+    @media (max-width: 720px) {
+      nav.site-nav { padding: 0 18px; height: 56px; }
+      nav.site-nav .nav-links { display: none; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- TOP NAV — anchors back to homepage sections -->
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">Spencer<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="/#what">What Spencer Does</a></li>
+      <li><a href="/#see-it">See it</a></li>
+      <li><a href="/fees.html">Fees</a></li>
+      <li><a href="/#snapshot">My Spencer</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+    </ul>
+    <a href="/#book" class="nav-cta">Book a call</a>
+  </nav>
 
   <!-- HERO -->
   <div class="hero">
